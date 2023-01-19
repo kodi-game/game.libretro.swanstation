@@ -1,0 +1,22 @@
+From 1d198896a020f2d74d9c0b2f087a44aecb4be576 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <themagnificentmrb@gmail.com>
+Date: Thu, 19 Jan 2023 10:57:01 -0800
+Subject: [PATCH] Add CMake install target
+
+---
+ src/libretro/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/libretro/CMakeLists.txt b/src/libretro/CMakeLists.txt
+index b332ccc8..b9cdf7bd 100644
+--- a/src/libretro/CMakeLists.txt
++++ b/src/libretro/CMakeLists.txt
+@@ -41,3 +41,5 @@ endif()
+ if(ANDROID)
+   set_target_properties(swanstation_libretro PROPERTIES OUTPUT_NAME "swanstation_libretro_android")
+ endif()
++
++install(TARGETS swanstation_libretro DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-- 
+2.34.1
+
