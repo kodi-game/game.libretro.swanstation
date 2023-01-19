@@ -13,7 +13,7 @@ GPLv3
 
 ### Icon
 
-Help make me an icon!
+![Icon](game.libretro.swanstation/resources/icon.png)
 
 ### Fanart
 
