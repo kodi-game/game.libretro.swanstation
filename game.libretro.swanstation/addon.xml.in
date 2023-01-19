@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.swanstation"
-		name="Sony - PlayStation (Swanstation)"
-		version="0.0.0.1"
-		provider-name="libretro">
+		name="Sony - PlayStation (SwanStation)"
+		version="1.0.0.1"
+		provider-name="stenzek">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
 		<import addon="game.controller.ps.dualanalog" version="1.0.0"/>
@@ -15,13 +15,13 @@
 	<extension point="kodi.gameclient"
 			library_@PLATFORM@="@LIBRARY_FILENAME@">
 		<platforms>PlayStation</platforms>
-		<extensions>bin|cue|img|mdf|pbp|toc|cbn|m3u|chd</extensions>
+		<extensions>exe|psexe|cue|bin|img|iso|chd|pbp|ecm|mds|psf|m3u</extensions>
 		<supports_vfs>false</supports_vfs>
 		<supports_standalone>false</supports_standalone>
 		<requires_opengl>false</requires_opengl>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-		<license>GPLv2</license>
+		<license>GPLv3</license>
 		<platform>@PLATFORM@</platform>
 		<source>https://github.com/kodi-game/game.libretro.swanstation</source>
 		<summary lang="en_GB">Sony - PlayStation (Swanstation)</summary>

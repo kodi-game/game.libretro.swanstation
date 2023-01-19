@@ -1,0 +1,17 @@
+Source: kodi-game-libretro-swanstation
+Priority: extra
+Maintainer: wsnipex <wsnipex@a1.net>
+Build-Depends: debhelper (>= 9.0.0),
+               cmake,
+               kodi-addon-dev,
+               libretro-swanstation (>= 1.0.0) | swanstation (>= 1.0.0)
+Standards-Version: 3.9.8
+Section: libs
+
+Package: kodi-game-libretro-swanstation
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, kodi, kodi-game-libretro
+Enhances: kodi
+Description: Sony - PlayStation (SwanStation) core for kodi's retroplayer
+ Sony - PlayStation (SwanStation) core for kodi's retroplayer
