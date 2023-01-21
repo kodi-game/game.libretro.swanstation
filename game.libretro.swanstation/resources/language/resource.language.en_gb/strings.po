@@ -413,41 +413,37 @@ msgid "Apply Compatibility Settings"
 msgstr ""
 
 msgctxt "#30097"
-msgid "Load Memory Cards From Save States"
-msgstr ""
-
-msgctxt "#30098"
 msgid "Log Level"
 msgstr ""
 
-msgctxt "#30099"
+msgctxt "#30098"
 msgid "CPU Recompiler ICache"
 msgstr ""
 
-msgctxt "#30100"
+msgctxt "#30099"
 msgid "CPU Recompiler Block Linking"
 msgstr ""
 
-msgctxt "#30101"
+msgctxt "#30100"
 msgid "CPU Recompiler Fast Memory Access"
 msgstr ""
 
-msgctxt "#30102"
+msgctxt "#30101"
 msgid "CPU Recompiler Fast Memory Access Rewrite"
 msgstr ""
 
-msgctxt "#30103"
+msgctxt "#30102"
 msgid "Enable VRAM Write Texture Replacement"
 msgstr ""
 
-msgctxt "#30104"
+msgctxt "#30103"
 msgid "Preload Texture Replacements"
 msgstr ""
 
-msgctxt "#30105"
+msgctxt "#30104"
 msgid "Internal Run-Ahead"
 msgstr ""
 
-msgctxt "#30106"
+msgctxt "#30105"
 msgid "Enable 8MB RAM (Dev Console)"
 msgstr ""
