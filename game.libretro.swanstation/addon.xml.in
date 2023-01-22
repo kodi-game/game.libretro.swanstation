@@ -27,6 +27,7 @@
 		<assets>
 			<icon>resources/icon.png</icon>
 		</assets>
+		<summary lang="da_DK">Sony - PlayStation (Swanstation)</summary>
 		<summary lang="en_GB">Sony - PlayStation (Swanstation)</summary>
 		<description lang="en_GB">Swanstation is a fast PlayStation 1 emulator for PC and Android.</description>
 	</extension>
