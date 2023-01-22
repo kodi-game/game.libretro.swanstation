@@ -1,0 +1,449 @@
+# game.libretro.swanstation language file
+# Addon Name: game.libretro.swanstation
+# Addon id: game.libretro.swanstation
+# Addon Provider: libretro
+msgid ""
+msgstr ""
+"Project-Id-Version: game.libretro.swanstation\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"POT-Creation-Date: 2023-01-19 19:00i\n"
+"PO-Revision-Date: 2023-01-19 19:00i\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: mt_mt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==0 || ( n%100>1 && n%100<11) ? 1 : (n%100>10 && n%100<20 ) ? 2 : 3;\n"
+
+msgctxt "Addon Summary"
+msgid "Sony - PlayStation (Swanstation)"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "Swanstation is a fast PlayStation 1 emulator for PC and Android."
+msgstr ""
+
+msgctxt "#30000"
+msgid "Settings"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Console Region"
+msgstr ""
+
+msgctxt "#30002"
+msgid "NTSC-J BIOS (Restart)"
+msgstr ""
+
+msgctxt "#30003"
+msgid "NTSC-U BIOS (Restart)"
+msgstr ""
+
+msgctxt "#30004"
+msgid "PAL BIOS (Restart)"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Fast Boot"
+msgstr ""
+
+msgctxt "#30006"
+msgid "CD-ROM Region Check"
+msgstr ""
+
+msgctxt "#30007"
+msgid "CD-ROM Read Thread"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Apply Image Patches"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Preload CD-ROM Image To RAM"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Pre-cache CHD Images To RAM"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Mute CD Audio"
+msgstr ""
+
+msgctxt "#30012"
+msgid "CD-ROM Read Speedup"
+msgstr ""
+
+msgctxt "#30013"
+msgid "CD-ROM Seek Speedup"
+msgstr ""
+
+msgctxt "#30014"
+msgid "CPU Execution Mode"
+msgstr ""
+
+msgctxt "#30015"
+msgid "GPU Renderer"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Internal Resolution Scale"
+msgstr ""
+
+msgctxt "#30017"
+msgid "Threaded Rendering (Software)"
+msgstr ""
+
+msgctxt "#30018"
+msgid "Use Software Renderer For Readbacks"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Multisample Antialiasing"
+msgstr ""
+
+msgctxt "#30020"
+msgid "True Color Rendering"
+msgstr ""
+
+msgctxt "#30021"
+msgid "Scaled Dithering"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Disable Interlacing"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Force NTSC Timings"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Force 4:3 For 24-Bit Display"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Chroma Smoothing For 24-Bit Display"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Texture Filtering"
+msgstr ""
+
+msgctxt "#30027"
+msgid "Widescreen Hack"
+msgstr ""
+
+msgctxt "#30028"
+msgid "PGXP Geometry Correction"
+msgstr ""
+
+msgctxt "#30029"
+msgid "PGXP Culling Correction"
+msgstr ""
+
+msgctxt "#30030"
+msgid "PGXP Texture Correction"
+msgstr ""
+
+msgctxt "#30031"
+msgid "PGXP Depth Buffer"
+msgstr ""
+
+msgctxt "#30032"
+msgid "PGXP Vertex Cache"
+msgstr ""
+
+msgctxt "#30033"
+msgid "PGXP CPU Mode"
+msgstr ""
+
+msgctxt "#30034"
+msgid "PGXP Preserve Projection Precision"
+msgstr ""
+
+msgctxt "#30035"
+msgid "PGXP Geometry Tolerance"
+msgstr ""
+
+msgctxt "#30036"
+msgid "PGXP Depth Clear Threshold"
+msgstr ""
+
+msgctxt "#30037"
+msgid "Core Provided Aspect Ratio"
+msgstr ""
+
+msgctxt "#30038"
+msgid "Custom Aspect Ratio Numerator"
+msgstr ""
+
+msgctxt "#30039"
+msgid "Custom Aspect Ratio Denominator"
+msgstr ""
+
+msgctxt "#30040"
+msgid "Crop Mode"
+msgstr ""
+
+msgctxt "#30041"
+msgid "Downsampling"
+msgstr ""
+
+msgctxt "#30042"
+msgid "Display OSD Messages"
+msgstr ""
+
+msgctxt "#30043"
+msgid "Display Active Start Offset"
+msgstr ""
+
+msgctxt "#30044"
+msgid "Display Active End Offset"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Display Line Start Offset"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Display Line End Offset"
+msgstr ""
+
+msgctxt "#30047"
+msgid "Memory Card 1 Type"
+msgstr ""
+
+msgctxt "#30048"
+msgid "Second Memory Card Type"
+msgstr ""
+
+msgctxt "#30049"
+msgid "Use Single Card For Playlist"
+msgstr ""
+
+msgctxt "#30050"
+msgid "Multitap Mode"
+msgstr ""
+
+msgctxt "#30051"
+msgid "DualShock Analog Mode Combo"
+msgstr ""
+
+msgctxt "#30052"
+msgid "Controller 1 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30053"
+msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30054"
+msgid "Controller 1 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30055"
+msgid "Controller 1 Vibration Bias"
+msgstr ""
+
+msgctxt "#30056"
+msgid "Controller 1 Lightgun X Scale"
+msgstr ""
+
+msgctxt "#30057"
+msgid "Controller 1 NeGcon Steering Axis Deadzone"
+msgstr ""
+
+msgctxt "#30058"
+msgid "Controller 1 NeGcon Twist Response"
+msgstr ""
+
+msgctxt "#30059"
+msgid "Controller 2 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Controller 2 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Controller 2 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Controller 2 Vibration Bias"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Controller 2 Lightgun X Scale"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Controller 2 NeGcon Steering Axis Deadzone"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Controller 2 NeGcon Twist Response"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Controller 3 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30068"
+msgid "Controller 3 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30069"
+msgid "Controller 3 Vibration Bias"
+msgstr ""
+
+msgctxt "#30070"
+msgid "Controller 3 NeGcon Steering Axis Deadzone"
+msgstr ""
+
+msgctxt "#30071"
+msgid "Controller 3 NeGcon Twist Response"
+msgstr ""
+
+msgctxt "#30072"
+msgid "Controller 4 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30073"
+msgid "Controller 4 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30074"
+msgid "Controller 4 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30075"
+msgid "Controller 4 Vibration Bias"
+msgstr ""
+
+msgctxt "#30076"
+msgid "Controller 4 NeGcon Steering Axis Deadzone"
+msgstr ""
+
+msgctxt "#30077"
+msgid "Controller 4 NeGcon Twist Response"
+msgstr ""
+
+msgctxt "#30078"
+msgid "Controller 5 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30079"
+msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30080"
+msgid "Controller 5 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30081"
+msgid "Controller 5 Vibration Bias"
+msgstr ""
+
+msgctxt "#30082"
+msgid "Controller 6 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30083"
+msgid "Controller 6 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30084"
+msgid "Controller 6 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30085"
+msgid "Controller 6 Vibration Bias"
+msgstr ""
+
+msgctxt "#30086"
+msgid "Controller 7 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30087"
+msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30088"
+msgid "Controller 7 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30089"
+msgid "Controller 7 Vibration Bias"
+msgstr ""
+
+msgctxt "#30090"
+msgid "Controller 8 Force Analog Mode on Reset"
+msgstr ""
+
+msgctxt "#30091"
+msgid "Controller 8 Use Analog Sticks for D-Pad in Digital Mode"
+msgstr ""
+
+msgctxt "#30092"
+msgid "Controller 8 Analog Axis Scale"
+msgstr ""
+
+msgctxt "#30093"
+msgid "Controller 8 Vibration Bias"
+msgstr ""
+
+msgctxt "#30094"
+msgid "CD-ROM Async Readahead"
+msgstr ""
+
+msgctxt "#30095"
+msgid "CPU Overclocking"
+msgstr ""
+
+msgctxt "#30096"
+msgid "Apply Compatibility Settings"
+msgstr ""
+
+msgctxt "#30097"
+msgid "Log Level"
+msgstr ""
+
+msgctxt "#30098"
+msgid "CPU Recompiler ICache"
+msgstr ""
+
+msgctxt "#30099"
+msgid "CPU Recompiler Block Linking"
+msgstr ""
+
+msgctxt "#30100"
+msgid "CPU Recompiler Fast Memory Access"
+msgstr ""
+
+msgctxt "#30101"
+msgid "CPU Recompiler Fast Memory Access Rewrite"
+msgstr ""
+
+msgctxt "#30102"
+msgid "Enable VRAM Write Texture Replacement"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Preload Texture Replacements"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Internal Run-Ahead"
+msgstr ""
+
+msgctxt "#30105"
+msgid "Enable 8MB RAM (Dev Console)"
+msgstr ""
