@@ -13,7 +13,7 @@ GPLv3
 
 ### Icon
 
-![Icon](game.libretro.swanstation/resources/icon.png)
+![Sony - PlayStation (SwanStation) icon](game.libretro.swanstation/resources/icon.png)
 
 ### Fanart
 
