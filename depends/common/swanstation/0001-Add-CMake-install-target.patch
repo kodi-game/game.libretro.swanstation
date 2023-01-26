@@ -1,7 +1,7 @@
-From 1d198896a020f2d74d9c0b2f087a44aecb4be576 Mon Sep 17 00:00:00 2001
+From da2059d3b952916ba660d1d099ea96786ab31972 Mon Sep 17 00:00:00 2001
 From: Garrett Brown <themagnificentmrb@gmail.com>
 Date: Thu, 19 Jan 2023 10:57:01 -0800
-Subject: [PATCH] Add CMake install target
+Subject: [PATCH 1/2] Add CMake install target
 
 ---
  src/libretro/CMakeLists.txt | 2 ++
