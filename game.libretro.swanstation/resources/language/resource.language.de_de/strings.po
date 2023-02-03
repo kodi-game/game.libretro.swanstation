@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: game.libretro.swanstation\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: 2023-01-19 19:00i\n"
-"PO-Revision-Date: 2023-01-30 23:16+0000\n"
+"PO-Revision-Date: 2023-02-03 20:57+0000\n"
 "Last-Translator: Demian <Demian@gmx.co.uk>\n"
 "Language-Team: German <https://kodi.weblate.cloud/projects/kodi-add-ons-game/game-libretro-swanstation/de_de/>\n"
 "Language: de_de\n"
@@ -59,7 +59,7 @@ msgstr ""
 
 msgctxt "#30008"
 msgid "Apply Image Patches"
-msgstr ""
+msgstr "Abbildpatches anwenden"
 
 msgctxt "#30009"
 msgid "Preload CD-ROM Image To RAM"
@@ -95,7 +95,7 @@ msgstr "Interne Auflösungsskala"
 
 msgctxt "#30017"
 msgid "Threaded Rendering (Software)"
-msgstr ""
+msgstr "Threaded-Rendering (Software)"
 
 msgctxt "#30018"
 msgid "Use Software Renderer For Readbacks"
@@ -123,7 +123,7 @@ msgstr ""
 
 msgctxt "#30024"
 msgid "Force 4:3 For 24-Bit Display"
-msgstr ""
+msgstr "4:3 für 24-Bit-Anzeige erzwingen"
 
 msgctxt "#30025"
 msgid "Chroma Smoothing For 24-Bit Display"
@@ -131,15 +131,15 @@ msgstr ""
 
 msgctxt "#30026"
 msgid "Texture Filtering"
-msgstr ""
+msgstr "Texturfilterung"
 
 msgctxt "#30027"
 msgid "Widescreen Hack"
-msgstr ""
+msgstr "Breitbild-Hack"
 
 msgctxt "#30028"
 msgid "PGXP Geometry Correction"
-msgstr ""
+msgstr "PGXP-Geometriekorrektur"
 
 msgctxt "#30029"
 msgid "PGXP Culling Correction"
@@ -147,31 +147,31 @@ msgstr ""
 
 msgctxt "#30030"
 msgid "PGXP Perspective Correct Textures"
-msgstr ""
+msgstr "PGXP Perspektivisch korrekte Texturen"
 
 msgctxt "#30031"
 msgid "PGXP Perspective Correct Colors"
-msgstr ""
+msgstr "PGXP Perspektivisch richtige Farben"
 
 msgctxt "#30032"
 msgid "PGXP Depth Buffer"
-msgstr ""
+msgstr "PGXP Tiefenpuffer"
 
 msgctxt "#30033"
 msgid "PGXP Vertex Cache"
-msgstr ""
+msgstr "PGXP Vertex-Cache"
 
 msgctxt "#30034"
 msgid "PGXP CPU Mode"
-msgstr ""
+msgstr "PGXP CPU-Modus"
 
 msgctxt "#30035"
 msgid "PGXP Preserve Projection Precision"
-msgstr ""
+msgstr "PGXP Projektionsgenauigkeit beibehalten"
 
 msgctxt "#30036"
 msgid "PGXP Geometry Tolerance"
-msgstr ""
+msgstr "PGXP Geometrietoleranz"
 
 msgctxt "#30037"
 msgid "PGXP Depth Clear Threshold"
@@ -179,11 +179,11 @@ msgstr ""
 
 msgctxt "#30038"
 msgid "Core Provided Aspect Ratio"
-msgstr ""
+msgstr "Von Core vorgegebenes Seitenverhältnis"
 
 msgctxt "#30039"
 msgid "Custom Aspect Ratio Numerator"
-msgstr ""
+msgstr "Benutzerdefinierter Seitenverhältniszähler"
 
 msgctxt "#30040"
 msgid "Custom Aspect Ratio Denominator"
@@ -191,15 +191,15 @@ msgstr ""
 
 msgctxt "#30041"
 msgid "Crop Mode"
-msgstr ""
+msgstr "Zuschneidemodus"
 
 msgctxt "#30042"
 msgid "Downsampling"
-msgstr ""
+msgstr "Downsampling"
 
 msgctxt "#30043"
 msgid "Display OSD Messages"
-msgstr ""
+msgstr "OSD-Meldungen anzeigen"
 
 msgctxt "#30044"
 msgid "Display Active Start Offset"
@@ -219,19 +219,19 @@ msgstr ""
 
 msgctxt "#30048"
 msgid "Memory Card 1 Type"
-msgstr ""
+msgstr "Speicherkarte-1-Typ"
 
 msgctxt "#30049"
 msgid "Second Memory Card Type"
-msgstr ""
+msgstr "Zweiter Speicherkartentyp"
 
 msgctxt "#30050"
 msgid "Use Single Card For Playlist"
-msgstr ""
+msgstr "Einzelne Karte für Wiedergabeliste verwenden"
 
 msgctxt "#30051"
 msgid "Multitap Mode"
-msgstr ""
+msgstr "Multitap-Modus"
 
 msgctxt "#30052"
 msgid "DualShock Analog Mode Combo"
@@ -239,15 +239,15 @@ msgstr ""
 
 msgctxt "#30053"
 msgid "DualShock Enable Rumble"
-msgstr ""
+msgstr "DualShock - Vibration aktivieren"
 
 msgctxt "#30054"
 msgid "Controller 1 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 1 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 1 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30056"
 msgid "Controller 1 Analog Axis Scale"
@@ -275,11 +275,11 @@ msgstr ""
 
 msgctxt "#30062"
 msgid "Controller 2 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 2 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30063"
 msgid "Controller 2 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 2 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30064"
 msgid "Controller 2 Analog Axis Scale"
@@ -307,11 +307,11 @@ msgstr ""
 
 msgctxt "#30070"
 msgid "Controller 3 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 3 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30071"
 msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 3 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30072"
 msgid "Controller 3 Analog Axis Scale"
@@ -331,11 +331,11 @@ msgstr ""
 
 msgctxt "#30076"
 msgid "Controller 4 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 4 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30077"
 msgid "Controller 4 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 4 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30078"
 msgid "Controller 4 Analog Axis Scale"
@@ -355,11 +355,11 @@ msgstr ""
 
 msgctxt "#30082"
 msgid "Controller 5 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 5 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30083"
 msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 5 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30084"
 msgid "Controller 5 Analog Axis Scale"
@@ -371,11 +371,11 @@ msgstr ""
 
 msgctxt "#30086"
 msgid "Controller 6 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 6 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30087"
 msgid "Controller 6 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 6 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30088"
 msgid "Controller 6 Analog Axis Scale"
@@ -387,11 +387,11 @@ msgstr ""
 
 msgctxt "#30090"
 msgid "Controller 7 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 7 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30091"
 msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 7 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30092"
 msgid "Controller 7 Analog Axis Scale"
@@ -403,11 +403,11 @@ msgstr ""
 
 msgctxt "#30094"
 msgid "Controller 8 Force Analog Mode on Reset"
-msgstr ""
+msgstr "Controller 7 Analogmodus bei Reset erzwingen"
 
 msgctxt "#30095"
 msgid "Controller 8 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 8 Analogsticks für D-Pad im Digitalmodus verwenden"
 
 msgctxt "#30096"
 msgid "Controller 8 Analog Axis Scale"
@@ -419,19 +419,19 @@ msgstr ""
 
 msgctxt "#30098"
 msgid "CD-ROM Async Readahead"
-msgstr ""
+msgstr "CD-ROM Asynchrones Vorauslesen"
 
 msgctxt "#30099"
 msgid "CPU Overclocking"
-msgstr ""
+msgstr "CPU-Übertaktung"
 
 msgctxt "#30100"
 msgid "Apply Compatibility Settings"
-msgstr ""
+msgstr "Kompatibilitätseinstellungen anwenden"
 
 msgctxt "#30101"
 msgid "Log Level"
-msgstr ""
+msgstr "Protokollstufe"
 
 msgctxt "#30102"
 msgid "CPU Recompiler ICache"
@@ -463,4 +463,4 @@ msgstr ""
 
 msgctxt "#30109"
 msgid "Enable 8MB RAM (Dev Console)"
-msgstr ""
+msgstr "8 MB RAM aktivieren (Dev Console)"
