@@ -464,3 +464,7 @@ msgstr ""
 msgctxt "#30109"
 msgid "Enable 8MB RAM (Dev Console)"
 msgstr "8 MB RAM aktivieren (Dev Console)"
+
+msgctxt "#30110"
+msgid "Use Old MDEC Routines"
+msgstr ""

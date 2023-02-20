@@ -464,3 +464,7 @@ msgstr "Avance Interno"
 msgctxt "#30109"
 msgid "Enable 8MB RAM (Dev Console)"
 msgstr "Activar 8MB RAM (Dev Console)"
+
+msgctxt "#30110"
+msgid "Use Old MDEC Routines"
+msgstr ""
