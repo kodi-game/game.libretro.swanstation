@@ -18,8 +18,8 @@ msgstr ""
 "X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
-msgid "Sony - PlayStation (Swanstation)"
-msgstr "Sony - PlayStation (Swanstation)"
+msgid "Sony - PlayStation (SwanStation)"
+msgstr ""
 
 msgctxt "Addon Description"
 msgid "Swanstation is a fast PlayStation 1 emulator for PC and Android."
@@ -468,6 +468,10 @@ msgstr "Activar 8MB RAM (Dev Console)"
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
 msgstr "Usar Rutinas Antiguas MDEC"
+
+#~ msgctxt "Addon Summary"
+#~ msgid "Sony - PlayStation (Swanstation)"
+#~ msgstr "Sony - PlayStation (Swanstation)"
 
 #~ msgctxt "#30008"
 #~ msgid "Apply Image Patches"
