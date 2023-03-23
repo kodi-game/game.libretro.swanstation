@@ -1,1 +1,1 @@
-swanstation https://github.com/libretro/swanstation/archive/d27eb69e9e9dfd5efcb4c686fb48de9d8be3d17b.tar.gz
+swanstation https://github.com/libretro/swanstation/archive/0175913d3ec0c439d2376bddc0f1718cc4c9c005.tar.gz

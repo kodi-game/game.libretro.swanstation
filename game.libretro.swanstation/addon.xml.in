@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.swanstation"
 		name="Sony - PlayStation (SwanStation)"
-		version="1.0.0.18"
+		version="1.0.0.19"
 		provider-name="stenzek">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
@@ -29,7 +29,7 @@
 		</assets>
 		<summary lang="da_DK">Sony - PlayStation (Swanstation)</summary>
 		<summary lang="de_DE">Sony - PlayStation (Swanstation)</summary>
-		<summary lang="en_GB">Sony - PlayStation (Swanstation)</summary>
+		<summary lang="en_GB">Sony - PlayStation (SwanStation)</summary>
 		<summary lang="es_ES">Sony - PlayStation (Swanstation)</summary>
 		<summary lang="fi_FI">Sony - PlayStation (Swanstation)</summary>
 		<description lang="de_DE">Swanstation ist ein schneller PlayStation-1-Emulator für PC und Android.</description>
