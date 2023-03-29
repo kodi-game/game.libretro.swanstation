@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/kodi-game/game.libretro.swanstation.svg?branch=master)](https://travis-ci.org/kodi-game/game.libretro.swanstation)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/kodi-game/game.libretro.swanstation?svg=true)](https://ci.appveyor.com/project/kodi-game/game-libretro-swanstation)
-
 # Sony - PlayStation (SwanStation)
 
 ### Description
