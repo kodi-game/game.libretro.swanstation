@@ -241,10 +241,6 @@ msgctxt "#30053"
 msgid "DualShock Enable Rumble"
 msgstr "Activar Rumble en DualShock"
 
-msgctxt "#30054"
-msgid "Controller 1 Force Analog Mode on Reset"
-msgstr "Mando 1 Forzar Modo Analógico al Reiniciar"
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "Mando 1 Utilizar los Sticks Analógicos para el D-Pad en Modo Digital"
@@ -272,10 +268,6 @@ msgstr "Mando 1 NeGcon Zona Muerta del Eje de Dirección"
 msgctxt "#30061"
 msgid "Controller 1 NeGcon Twist Response"
 msgstr "Mando 1 NeGcon Respuesta de Giro"
-
-msgctxt "#30062"
-msgid "Controller 2 Force Analog Mode on Reset"
-msgstr "Mando 2 Forzar Modo Analógico al Reiniciar"
 
 msgctxt "#30063"
 msgid "Controller 2 Use Analog Sticks for D-Pad in Digital Mode"
@@ -305,10 +297,6 @@ msgctxt "#30069"
 msgid "Controller 2 NeGcon Twist Response"
 msgstr "Mando 2 NeGcon Respuesta de Giro"
 
-msgctxt "#30070"
-msgid "Controller 3 Force Analog Mode on Reset"
-msgstr "Mando 3 Forzar Modo Analógico al Reiniciar"
-
 msgctxt "#30071"
 msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "Mando 3 Utilizar los Sticks Analógicos para el D-Pad en Modo Digital"
@@ -328,10 +316,6 @@ msgstr "Mando 3 NeGcon Zona Muerta del Eje de Dirección"
 msgctxt "#30075"
 msgid "Controller 3 NeGcon Twist Response"
 msgstr "Mando 3 NeGcon Respuesta de Giro"
-
-msgctxt "#30076"
-msgid "Controller 4 Force Analog Mode on Reset"
-msgstr "Mando 4 Forzar Modo Analógico al Reiniciar"
 
 msgctxt "#30077"
 msgid "Controller 4 Use Analog Sticks for D-Pad in Digital Mode"
@@ -353,10 +337,6 @@ msgctxt "#30081"
 msgid "Controller 4 NeGcon Twist Response"
 msgstr "Mando 4 NeGcon Respuesta de Giro"
 
-msgctxt "#30082"
-msgid "Controller 5 Force Analog Mode on Reset"
-msgstr "Mando 5 Forzar Modo Analógico al Reiniciar"
-
 msgctxt "#30083"
 msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "Mando 5 Utilizar los Sticks Analógicos para el D-Pad en Modo Digital"
@@ -368,10 +348,6 @@ msgstr "Mando 5 Escala Eje Analógico"
 msgctxt "#30085"
 msgid "Controller 5 Vibration Bias"
 msgstr "Mando 5 Vibración Bias"
-
-msgctxt "#30086"
-msgid "Controller 6 Force Analog Mode on Reset"
-msgstr "Mando 6 Forzar Modo Analógico al Reiniciar"
 
 msgctxt "#30087"
 msgid "Controller 6 Use Analog Sticks for D-Pad in Digital Mode"
@@ -385,10 +361,6 @@ msgctxt "#30089"
 msgid "Controller 6 Vibration Bias"
 msgstr "Mando 6 Vibración Bias"
 
-msgctxt "#30090"
-msgid "Controller 7 Force Analog Mode on Reset"
-msgstr "Mando 7 Forzar Modo Analógico al Reiniciar"
-
 msgctxt "#30091"
 msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "Mando 7 Utilizar los Sticks Analógicos para el D-Pad en Modo Digital"
@@ -400,10 +372,6 @@ msgstr "Mando 7 Escala Eje Analógico"
 msgctxt "#30093"
 msgid "Controller 7 Vibration Bias"
 msgstr "Mando 7 Vibración Bias"
-
-msgctxt "#30094"
-msgid "Controller 8 Force Analog Mode on Reset"
-msgstr "Mando 8 Forzar Modo Analógico al Reiniciar"
 
 msgctxt "#30095"
 msgid "Controller 8 Use Analog Sticks for D-Pad in Digital Mode"
@@ -468,6 +436,78 @@ msgstr "Activar 8MB RAM (Dev Console)"
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
 msgstr "Usar Rutinas Antiguas MDEC"
+
+msgctxt "#30111"
+msgid "GunCon Show Crosshair"
+msgstr ""
+
+msgctxt "#30112"
+msgid "Controller 1 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Controller 2 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Controller 3 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30115"
+msgid "Controller 4 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30116"
+msgid "Controller 5 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Controller 6 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Controller 7 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Controller 8 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30120"
+msgid "Use Alternative Audio Hook (Restart)"
+msgstr ""
+
+#~ msgctxt "#30054"
+#~ msgid "Controller 1 Force Analog Mode on Reset"
+#~ msgstr "Mando 1 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30062"
+#~ msgid "Controller 2 Force Analog Mode on Reset"
+#~ msgstr "Mando 2 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30070"
+#~ msgid "Controller 3 Force Analog Mode on Reset"
+#~ msgstr "Mando 3 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30076"
+#~ msgid "Controller 4 Force Analog Mode on Reset"
+#~ msgstr "Mando 4 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30082"
+#~ msgid "Controller 5 Force Analog Mode on Reset"
+#~ msgstr "Mando 5 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30086"
+#~ msgid "Controller 6 Force Analog Mode on Reset"
+#~ msgstr "Mando 6 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30090"
+#~ msgid "Controller 7 Force Analog Mode on Reset"
+#~ msgstr "Mando 7 Forzar Modo Analógico al Reiniciar"
+
+#~ msgctxt "#30094"
+#~ msgid "Controller 8 Force Analog Mode on Reset"
+#~ msgstr "Mando 8 Forzar Modo Analógico al Reiniciar"
 
 #~ msgctxt "Addon Summary"
 #~ msgid "Sony - PlayStation (Swanstation)"

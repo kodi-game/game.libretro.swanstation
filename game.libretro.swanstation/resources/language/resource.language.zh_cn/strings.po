@@ -241,10 +241,6 @@ msgctxt "#30053"
 msgid "DualShock Enable Rumble"
 msgstr "DualShock 启用隆隆声效"
 
-msgctxt "#30054"
-msgid "Controller 1 Force Analog Mode on Reset"
-msgstr "控制器1强制模拟模式复位"
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "控制器1在数字模式下使用模拟摇杆作为 D-Pad"
@@ -272,10 +268,6 @@ msgstr "控制器1 NeGcon 转向轴死区"
 msgctxt "#30061"
 msgid "Controller 1 NeGcon Twist Response"
 msgstr "控制器1 NeGcon 扭转响应"
-
-msgctxt "#30062"
-msgid "Controller 2 Force Analog Mode on Reset"
-msgstr "控制器2强制模拟模式复位"
 
 msgctxt "#30063"
 msgid "Controller 2 Use Analog Sticks for D-Pad in Digital Mode"
@@ -305,10 +297,6 @@ msgctxt "#30069"
 msgid "Controller 2 NeGcon Twist Response"
 msgstr "控制器2 NeGcon 扭转响应"
 
-msgctxt "#30070"
-msgid "Controller 3 Force Analog Mode on Reset"
-msgstr "控制器3强制模拟模式复位"
-
 msgctxt "#30071"
 msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "控制器3在数字模式下使用模拟摇杆作为 D-Pad"
@@ -328,10 +316,6 @@ msgstr "控制器3 NeGcon 转向轴死区"
 msgctxt "#30075"
 msgid "Controller 3 NeGcon Twist Response"
 msgstr "控制器3 NeGcon 扭转响应"
-
-msgctxt "#30076"
-msgid "Controller 4 Force Analog Mode on Reset"
-msgstr "控制器4强制模拟模式复位"
 
 msgctxt "#30077"
 msgid "Controller 4 Use Analog Sticks for D-Pad in Digital Mode"
@@ -353,10 +337,6 @@ msgctxt "#30081"
 msgid "Controller 4 NeGcon Twist Response"
 msgstr "控制器4 NeGcon 扭转响应"
 
-msgctxt "#30082"
-msgid "Controller 5 Force Analog Mode on Reset"
-msgstr "控制器5强制模拟模式复位"
-
 msgctxt "#30083"
 msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "控制器5在数字模式下使用模拟摇杆作为 D-Pad"
@@ -368,10 +348,6 @@ msgstr "控制器5模拟轴比例"
 msgctxt "#30085"
 msgid "Controller 5 Vibration Bias"
 msgstr "控制器5振动偏差"
-
-msgctxt "#30086"
-msgid "Controller 6 Force Analog Mode on Reset"
-msgstr "控制器6强制模拟模式复位"
 
 msgctxt "#30087"
 msgid "Controller 6 Use Analog Sticks for D-Pad in Digital Mode"
@@ -385,10 +361,6 @@ msgctxt "#30089"
 msgid "Controller 6 Vibration Bias"
 msgstr "控制器6振动偏差"
 
-msgctxt "#30090"
-msgid "Controller 7 Force Analog Mode on Reset"
-msgstr "控制器7强制模拟模式复位"
-
 msgctxt "#30091"
 msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "控制器7在数字模式下使用模拟摇杆作为 D-Pad"
@@ -400,10 +372,6 @@ msgstr "控制器7模拟轴比例"
 msgctxt "#30093"
 msgid "Controller 7 Vibration Bias"
 msgstr "控制器7振动偏差"
-
-msgctxt "#30094"
-msgid "Controller 8 Force Analog Mode on Reset"
-msgstr "控制器8强制模拟模式复位"
 
 msgctxt "#30095"
 msgid "Controller 8 Use Analog Sticks for D-Pad in Digital Mode"
@@ -468,3 +436,75 @@ msgstr "启用 8MB RAM（开发控制台）"
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
 msgstr "使用旧的 MDEC 例程"
+
+msgctxt "#30111"
+msgid "GunCon Show Crosshair"
+msgstr ""
+
+msgctxt "#30112"
+msgid "Controller 1 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Controller 2 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Controller 3 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30115"
+msgid "Controller 4 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30116"
+msgid "Controller 5 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Controller 6 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Controller 7 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Controller 8 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30120"
+msgid "Use Alternative Audio Hook (Restart)"
+msgstr ""
+
+#~ msgctxt "#30054"
+#~ msgid "Controller 1 Force Analog Mode on Reset"
+#~ msgstr "控制器1强制模拟模式复位"
+
+#~ msgctxt "#30062"
+#~ msgid "Controller 2 Force Analog Mode on Reset"
+#~ msgstr "控制器2强制模拟模式复位"
+
+#~ msgctxt "#30070"
+#~ msgid "Controller 3 Force Analog Mode on Reset"
+#~ msgstr "控制器3强制模拟模式复位"
+
+#~ msgctxt "#30076"
+#~ msgid "Controller 4 Force Analog Mode on Reset"
+#~ msgstr "控制器4强制模拟模式复位"
+
+#~ msgctxt "#30082"
+#~ msgid "Controller 5 Force Analog Mode on Reset"
+#~ msgstr "控制器5强制模拟模式复位"
+
+#~ msgctxt "#30086"
+#~ msgid "Controller 6 Force Analog Mode on Reset"
+#~ msgstr "控制器6强制模拟模式复位"
+
+#~ msgctxt "#30090"
+#~ msgid "Controller 7 Force Analog Mode on Reset"
+#~ msgstr "控制器7强制模拟模式复位"
+
+#~ msgctxt "#30094"
+#~ msgid "Controller 8 Force Analog Mode on Reset"
+#~ msgstr "控制器8强制模拟模式复位"

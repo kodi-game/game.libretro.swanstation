@@ -241,10 +241,6 @@ msgctxt "#30053"
 msgid "DualShock Enable Rumble"
 msgstr ""
 
-msgctxt "#30054"
-msgid "Controller 1 Force Analog Mode on Reset"
-msgstr ""
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr ""
@@ -271,10 +267,6 @@ msgstr ""
 
 msgctxt "#30061"
 msgid "Controller 1 NeGcon Twist Response"
-msgstr ""
-
-msgctxt "#30062"
-msgid "Controller 2 Force Analog Mode on Reset"
 msgstr ""
 
 msgctxt "#30063"
@@ -305,10 +297,6 @@ msgctxt "#30069"
 msgid "Controller 2 NeGcon Twist Response"
 msgstr ""
 
-msgctxt "#30070"
-msgid "Controller 3 Force Analog Mode on Reset"
-msgstr ""
-
 msgctxt "#30071"
 msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr ""
@@ -327,10 +315,6 @@ msgstr ""
 
 msgctxt "#30075"
 msgid "Controller 3 NeGcon Twist Response"
-msgstr ""
-
-msgctxt "#30076"
-msgid "Controller 4 Force Analog Mode on Reset"
 msgstr ""
 
 msgctxt "#30077"
@@ -353,10 +337,6 @@ msgctxt "#30081"
 msgid "Controller 4 NeGcon Twist Response"
 msgstr ""
 
-msgctxt "#30082"
-msgid "Controller 5 Force Analog Mode on Reset"
-msgstr ""
-
 msgctxt "#30083"
 msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr ""
@@ -367,10 +347,6 @@ msgstr ""
 
 msgctxt "#30085"
 msgid "Controller 5 Vibration Bias"
-msgstr ""
-
-msgctxt "#30086"
-msgid "Controller 6 Force Analog Mode on Reset"
 msgstr ""
 
 msgctxt "#30087"
@@ -385,10 +361,6 @@ msgctxt "#30089"
 msgid "Controller 6 Vibration Bias"
 msgstr ""
 
-msgctxt "#30090"
-msgid "Controller 7 Force Analog Mode on Reset"
-msgstr ""
-
 msgctxt "#30091"
 msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr ""
@@ -399,10 +371,6 @@ msgstr ""
 
 msgctxt "#30093"
 msgid "Controller 7 Vibration Bias"
-msgstr ""
-
-msgctxt "#30094"
-msgid "Controller 8 Force Analog Mode on Reset"
 msgstr ""
 
 msgctxt "#30095"
@@ -467,4 +435,44 @@ msgstr ""
 
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
+msgstr ""
+
+msgctxt "#30111"
+msgid "GunCon Show Crosshair"
+msgstr ""
+
+msgctxt "#30112"
+msgid "Controller 1 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30113"
+msgid "Controller 2 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30114"
+msgid "Controller 3 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30115"
+msgid "Controller 4 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30116"
+msgid "Controller 5 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30117"
+msgid "Controller 6 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30118"
+msgid "Controller 7 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30119"
+msgid "Controller 8 Force Analog Mode"
+msgstr ""
+
+msgctxt "#30120"
+msgid "Use Alternative Audio Hook (Restart)"
 msgstr ""
