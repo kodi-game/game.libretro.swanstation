@@ -233,14 +233,6 @@ msgctxt "#30051"
 msgid "Multitap Mode"
 msgstr ""
 
-msgctxt "#30052"
-msgid "DualShock Analog Mode Combo"
-msgstr ""
-
-msgctxt "#30053"
-msgid "DualShock Enable Rumble"
-msgstr ""
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr ""
@@ -475,6 +467,14 @@ msgstr ""
 
 msgctxt "#30120"
 msgid "Use Alternative Audio Hook (Restart)"
+msgstr ""
+
+msgctxt "#30121"
+msgid "Analog Mode Combo"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Enable Rumble"
 msgstr ""
 
 #~ msgctxt "Addon Summary"

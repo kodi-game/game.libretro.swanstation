@@ -233,14 +233,6 @@ msgctxt "#30051"
 msgid "Multitap Mode"
 msgstr "Modo Multitap"
 
-msgctxt "#30052"
-msgid "DualShock Analog Mode Combo"
-msgstr "Combo de Modo Analógico DualShock"
-
-msgctxt "#30053"
-msgid "DualShock Enable Rumble"
-msgstr "Activar Rumble en DualShock"
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "Mando 1 Utilizar los Sticks Analógicos para el D-Pad en Modo Digital"
@@ -476,6 +468,22 @@ msgstr "Mando 8 Forzar Modo Analógico"
 msgctxt "#30120"
 msgid "Use Alternative Audio Hook (Restart)"
 msgstr "Utilizar Enlace de Audio Alternativo (Reiniciar)"
+
+msgctxt "#30121"
+msgid "Analog Mode Combo"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Enable Rumble"
+msgstr ""
+
+#~ msgctxt "#30052"
+#~ msgid "DualShock Analog Mode Combo"
+#~ msgstr "Combo de Modo Analógico DualShock"
+
+#~ msgctxt "#30053"
+#~ msgid "DualShock Enable Rumble"
+#~ msgstr "Activar Rumble en DualShock"
 
 #~ msgctxt "#30054"
 #~ msgid "Controller 1 Force Analog Mode on Reset"

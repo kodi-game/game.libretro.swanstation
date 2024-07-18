@@ -233,14 +233,6 @@ msgctxt "#30051"
 msgid "Multitap Mode"
 msgstr "多插转换器模式"
 
-msgctxt "#30052"
-msgid "DualShock Analog Mode Combo"
-msgstr "DualShock 模拟模式组合"
-
-msgctxt "#30053"
-msgid "DualShock Enable Rumble"
-msgstr "DualShock 启用隆隆声效"
-
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
 msgstr "控制器1在数字模式下使用模拟摇杆作为 D-Pad"
@@ -476,6 +468,22 @@ msgstr ""
 msgctxt "#30120"
 msgid "Use Alternative Audio Hook (Restart)"
 msgstr ""
+
+msgctxt "#30121"
+msgid "Analog Mode Combo"
+msgstr ""
+
+msgctxt "#30122"
+msgid "Enable Rumble"
+msgstr ""
+
+#~ msgctxt "#30052"
+#~ msgid "DualShock Analog Mode Combo"
+#~ msgstr "DualShock 模拟模式组合"
+
+#~ msgctxt "#30053"
+#~ msgid "DualShock Enable Rumble"
+#~ msgstr "DualShock 启用隆隆声效"
 
 #~ msgctxt "#30054"
 #~ msgid "Controller 1 Force Analog Mode on Reset"
