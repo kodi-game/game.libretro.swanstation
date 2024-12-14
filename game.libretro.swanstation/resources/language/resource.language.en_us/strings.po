@@ -24,10 +24,6 @@ msgctxt "Addon Description"
 msgid "Swanstation is a fast PlayStation 1 emulator for PC and Android."
 msgstr ""
 
-msgctxt "#30000"
-msgid "Settings"
-msgstr ""
-
 msgctxt "#30001"
 msgid "Console Region"
 msgstr ""

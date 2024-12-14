@@ -25,10 +25,6 @@ msgctxt "Addon Description"
 msgid "Swanstation is a fast PlayStation 1 emulator for PC and Android."
 msgstr "Swanstation 是一款适用于 PC 和 Android 的快速 PlayStation 1模拟器。"
 
-msgctxt "#30000"
-msgid "Settings"
-msgstr "设置"
-
 msgctxt "#30001"
 msgid "Console Region"
 msgstr "控制台区域"
@@ -476,6 +472,10 @@ msgstr ""
 msgctxt "#30122"
 msgid "Enable Rumble"
 msgstr ""
+
+#~ msgctxt "#30000"
+#~ msgid "Settings"
+#~ msgstr "设置"
 
 #~ msgctxt "#30052"
 #~ msgid "DualShock Analog Mode Combo"
