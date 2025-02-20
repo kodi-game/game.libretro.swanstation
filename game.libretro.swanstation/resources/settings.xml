@@ -52,8 +52,8 @@
 		<setting label="30049" type="select" id="swanstation_MemoryCards_Card2Type" values="None|Shared|PerGame|PerGameTitle" default="None"/>
 		<setting label="30050" type="select" id="swanstation_MemoryCards_UsePlaylistTitle" values="true|false" default="true"/>
 		<setting label="30051" type="select" id="swanstation_ControllerPorts_MultitapMode" values="Disabled|Port1Only|Port2Only|BothPorts" default="Disabled"/>
-		<setting label="30121" type="select" id="swanstation_Controller_AnalogCombo" values="3|1|2|4|5|6|7|8|9|10|11" default="3"/>
-		<setting label="30122" type="select" id="swanstation_Controller_EnableRumble" values="true|false" default="true"/>
+		<setting label="30123" type="select" id="swanstation_Controller_AnalogCombo" values="3|1|2|4|5|6|7|8|9|10|11" default="3"/>
+		<setting label="30124" type="select" id="swanstation_Controller_EnableRumble" values="true|false" default="true"/>
 		<setting label="30111" type="select" id="swanstation_Controller_ShowCrosshair" values="true|false" default="true"/>
 		<setting label="30112" type="select" id="swanstation_Controller1_ForceAnalog" values="false|true" default="false"/>
 		<setting label="30055" type="select" id="swanstation_Controller1_AnalogDPadInDigitalMode" values="true|false" default="true"/>
@@ -105,13 +105,13 @@
 		<setting label="30101" type="select" id="swanstation_Logging_LogLevel" values="Info|None|Error|Warning|Perf|Success|Dev|Profile|Debug|Trace" default="Info"/>
 		<setting label="30102" type="select" id="swanstation_CPU_RecompilerICache" values="false|true" default="false"/>
 		<setting label="30103" type="select" id="swanstation_CPU_RecompilerBlockLinking" values="true|false" default="true"/>
-		<setting label="30104" type="select" id="swanstation_CPU_FastmemMode" values="LUT|Disabled|MMap" default="LUT"/>
+		<setting label="30104" type="select" id="swanstation_CPU_FastmemMode" values="MMap|Disabled|LUT" default="MMap"/>
 		<setting label="30105" type="select" id="swanstation_CPU_FastmemRewrite" values="false|true" default="false"/>
 		<setting label="30106" type="select" id="swanstation_TextureReplacements_EnableVRAMWriteReplacements" values="false|true" default="false"/>
 		<setting label="30107" type="select" id="swanstation_TextureReplacements_PreloadTextures" values="false|true" default="false"/>
 		<setting label="30108" type="select" id="swanstation_Main_RunaheadFrameCount" values="0|1|2|3|4|5|6|7|8|9|10" default="0"/>
 		<setting label="30109" type="select" id="swanstation_Console_Enable8MBRAM" values="false|true" default="false"/>
-		<setting label="30110" type="select" id="swanstation_Hacks_OldMDECRoutines" values="true|false" default="true"/>
+		<setting label="30110" type="select" id="swanstation_Hacks_UseOldMDECRoutines" values="false|true" default="false"/>
 		<setting label="30120" type="select" id="swanstation_Audio_FastHook" values="true|false" default="true"/>
 	</category>
 </settings>
