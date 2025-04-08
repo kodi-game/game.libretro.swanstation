@@ -29,10 +29,12 @@
 		</assets>
 		<summary lang="en_GB">Sony - PlayStation (SwanStation)</summary>
 		<summary lang="es_ES">Sony - PlayStation (SwanStation)</summary>
+		<summary lang="sv_SE">Sony - PlayStation (SwanStation)</summary>
 		<summary lang="zh_CN">Sony - PlayStation (SwanStation)</summary>
 		<description lang="de_DE">Swanstation ist ein schneller PlayStation-1-Emulator für PC und Android.</description>
 		<description lang="en_GB">Swanstation is a fast PlayStation 1 emulator for PC and Android.</description>
 		<description lang="es_ES">Swanstation es un emulador rápido de PlayStation 1 para PC y Android.</description>
+		<description lang="sv_SE">Swanstation är en snabb PlayStation 1-emulator för PC och Android.</description>
 		<description lang="zh_CN">Swanstation 是一款适用于 PC 和 Android 的快速 PlayStation 1模拟器。</description>
 	</extension>
 </addon>
