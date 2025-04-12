@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: game.libretro.swanstation\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: 2023-01-19 19:00i\n"
-"PO-Revision-Date: 2025-04-11 09:05+0000\n"
+"PO-Revision-Date: 2025-04-12 12:26+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-game/game-libretro-swanstation/sv_se/>\n"
 "Language: sv_se\n"
@@ -45,433 +45,538 @@ msgctxt "#30005"
 msgid "Fast Boot"
 msgstr "Snabb uppstart"
 
+#, fuzzy
 msgctxt "#30006"
 msgid "CD-ROM Region Check"
-msgstr ""
+msgstr "CD-ROM Regionkontroll"
 
+#, fuzzy
 msgctxt "#30007"
 msgid "CD-ROM Read Thread"
-msgstr ""
+msgstr "Tråd för CD-ROM-läsning"
 
+#, fuzzy
 msgctxt "#30008"
 msgid "Apply Image Patches (Restart)"
-msgstr ""
+msgstr "Tillämpa bildkorrigeringar (omstart)"
 
+#, fuzzy
 msgctxt "#30009"
 msgid "Preload CD-ROM Image To RAM"
-msgstr ""
+msgstr "Förladda CD-ROM-bilder till RAM"
 
+#, fuzzy
 msgctxt "#30010"
 msgid "Pre-cache CHD Images To RAM"
-msgstr ""
+msgstr "Pre-cache CHD-bilder till RAM"
 
+#, fuzzy
 msgctxt "#30011"
 msgid "Mute CD Audio"
-msgstr ""
+msgstr "Stäng av ljudet på CD"
 
+#, fuzzy
 msgctxt "#30012"
 msgid "CD-ROM Read Speedup"
-msgstr ""
+msgstr "Ökad läshastighet för CD-ROM"
 
+#, fuzzy
 msgctxt "#30013"
 msgid "CD-ROM Seek Speedup"
-msgstr ""
+msgstr "Snabbare CD-ROM-sökning"
 
+#, fuzzy
 msgctxt "#30014"
 msgid "CPU Execution Mode"
-msgstr ""
+msgstr "CPU Exekveringsläge"
 
+#, fuzzy
 msgctxt "#30015"
 msgid "GPU Renderer"
-msgstr ""
+msgstr "GPU-rendering"
 
+#, fuzzy
 msgctxt "#30016"
 msgid "Internal Resolution Scale"
-msgstr ""
+msgstr "Intern upplösning Skala"
 
+#, fuzzy
 msgctxt "#30017"
 msgid "Threaded Rendering (Software)"
-msgstr ""
+msgstr "Trådad rendering (programvara)"
 
+#, fuzzy
 msgctxt "#30018"
 msgid "Use Software Renderer For Readbacks (Restart)"
-msgstr ""
+msgstr "Använd Software Renderer för återläsning (omstart)"
 
+#, fuzzy
 msgctxt "#30019"
 msgid "Multisample Antialiasing"
-msgstr ""
+msgstr "Antialiasing för flera prov"
 
+#, fuzzy
 msgctxt "#30020"
 msgid "True Color Rendering"
-msgstr ""
+msgstr "Rendering av äkta färg"
 
 msgctxt "#30021"
 msgid "Scaled Dithering"
-msgstr ""
+msgstr "Skalad dithering"
 
 msgctxt "#30022"
 msgid "Disable Interlacing"
-msgstr ""
+msgstr "Inaktivera interlacing"
 
+#, fuzzy
 msgctxt "#30023"
 msgid "Force NTSC Timings"
-msgstr ""
+msgstr "Forcera NTSC-tidtagning"
 
+#, fuzzy
 msgctxt "#30024"
 msgid "Force 4:3 For 24-Bit Display"
-msgstr ""
+msgstr "Force 4:3 för 24-bitars display"
 
+#, fuzzy
 msgctxt "#30025"
 msgid "Chroma Smoothing For 24-Bit Display"
-msgstr ""
+msgstr "Chroma-utjämning för 24-bitars skärm"
 
+#, fuzzy
 msgctxt "#30026"
 msgid "Texture Filtering"
-msgstr ""
+msgstr "Texturfiltrering"
 
+#, fuzzy
 msgctxt "#30027"
 msgid "Widescreen Hack"
-msgstr ""
+msgstr "Widescreen Hack"
 
+#, fuzzy
 msgctxt "#30028"
 msgid "PGXP Geometry Correction"
-msgstr ""
+msgstr "PGXP Geometri-korrigering"
 
+#, fuzzy
 msgctxt "#30029"
 msgid "PGXP Culling Correction"
-msgstr ""
+msgstr "PGXP Avlivning Korrigering"
 
+#, fuzzy
 msgctxt "#30030"
 msgid "PGXP Perspective Correct Textures"
-msgstr ""
+msgstr "PGXP Perspektiv Korrekta texturer"
 
+#, fuzzy
 msgctxt "#30031"
 msgid "PGXP Perspective Correct Colors"
-msgstr ""
+msgstr "PGXP Perspektiv Korrigera färger"
 
+#, fuzzy
 msgctxt "#30032"
 msgid "PGXP Depth Buffer"
-msgstr ""
+msgstr "PGXP Djupbuffert"
 
+#, fuzzy
 msgctxt "#30033"
 msgid "PGXP Vertex Cache"
-msgstr ""
+msgstr "PGXP Vertex-cache"
 
+#, fuzzy
 msgctxt "#30034"
 msgid "PGXP CPU Mode"
-msgstr ""
+msgstr "PGXP CPU-läge"
 
+#, fuzzy
 msgctxt "#30035"
 msgid "PGXP Preserve Projection Precision"
-msgstr ""
+msgstr "PGXP Bevara projektionsprecision"
 
+#, fuzzy
 msgctxt "#30036"
 msgid "PGXP Geometry Tolerance"
-msgstr ""
+msgstr "PGXP 2D-geometritolerans"
 
+#, fuzzy
 msgctxt "#30037"
 msgid "PGXP Depth Clear Threshold"
-msgstr ""
+msgstr "PGXP Djup Clear tröskelvärde"
 
+#, fuzzy
 msgctxt "#30038"
 msgid "Core Provided Aspect Ratio"
-msgstr ""
+msgstr "Kärnan tillhandahålls Aspect Ratio"
 
+#, fuzzy
 msgctxt "#30039"
 msgid "Custom Aspect Ratio Numerator"
-msgstr ""
+msgstr "Anpassad täljare för bildförhållande"
 
+#, fuzzy
 msgctxt "#30040"
 msgid "Custom Aspect Ratio Denominator"
-msgstr ""
+msgstr "Anpassat bildförhållande Nämnare"
 
+#, fuzzy
 msgctxt "#30041"
 msgid "Crop Mode"
-msgstr ""
+msgstr "Beskärningsläge"
 
+#, fuzzy
 msgctxt "#30042"
 msgid "Downsampling"
-msgstr ""
+msgstr "Nedprovning"
 
+#, fuzzy
 msgctxt "#30043"
 msgid "Display OSD Messages"
-msgstr ""
+msgstr "Visa skärmmeddelanden"
 
+#, fuzzy
 msgctxt "#30044"
 msgid "Display Active Start Offset"
-msgstr ""
+msgstr "Visa aktiv startoffset"
 
+#, fuzzy
 msgctxt "#30045"
 msgid "Display Active End Offset"
-msgstr ""
+msgstr "Visa aktiv slutoffset"
 
+#, fuzzy
 msgctxt "#30046"
 msgid "Display Line Start Offset"
-msgstr ""
+msgstr "Display Linje Start Offset"
 
+#, fuzzy
 msgctxt "#30047"
 msgid "Display Line End Offset"
-msgstr ""
+msgstr "Offset för visning av radens slut"
 
+#, fuzzy
 msgctxt "#30048"
 msgid "Memory Card 1 Type (Restart)"
-msgstr ""
+msgstr "Typ av minneskort 1 (omstart)"
 
+#, fuzzy
 msgctxt "#30049"
 msgid "Memory Card 2 Type"
-msgstr ""
+msgstr "Minneskort 2 Typ"
 
+#, fuzzy
 msgctxt "#30050"
 msgid "Use Single Card For Playlist"
-msgstr ""
+msgstr "Använd ett enda kort för spellista"
 
+#, fuzzy
 msgctxt "#30051"
 msgid "Multitap Mode"
-msgstr ""
+msgstr "Multitap-läge"
 
+#, fuzzy
 msgctxt "#30055"
 msgid "Controller 1 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 1 Använda analoga pinnar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30056"
 msgid "Controller 1 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 1 Analog axelskala"
 
+#, fuzzy
 msgctxt "#30057"
 msgid "Controller 1 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 1 Vibrationsförspänning"
 
+#, fuzzy
 msgctxt "#30058"
 msgid "Controller 1 Lightgun X Scale"
-msgstr ""
+msgstr "Styrenhet 1 Lightgun X Scale"
 
+#, fuzzy
 msgctxt "#30059"
 msgid "Controller 1 Lightgun Y Scale"
-msgstr ""
+msgstr "Controller 1 Lightgun Y-skala"
 
+#, fuzzy
 msgctxt "#30060"
 msgid "Controller 1 NeGcon Steering Axis Deadzone"
-msgstr ""
+msgstr "Styrenhet 1 NeGcon styraxel dödzon"
 
+#, fuzzy
 msgctxt "#30061"
 msgid "Controller 1 NeGcon Twist Response"
-msgstr ""
+msgstr "Styrenhet 1 NeGcon Twist Response"
 
+#, fuzzy
 msgctxt "#30063"
 msgid "Controller 2 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 2 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30064"
 msgid "Controller 2 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 2 Analog axelskala"
 
+#, fuzzy
 msgctxt "#30065"
 msgid "Controller 2 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 2 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30066"
 msgid "Controller 2 Lightgun X Scale"
-msgstr ""
+msgstr "Controller 2 Lightgun X Scale"
 
+#, fuzzy
 msgctxt "#30067"
 msgid "Controller 2 Lightgun Y Scale"
-msgstr ""
+msgstr "Controller 2 Lightgun Y Skala"
 
+#, fuzzy
 msgctxt "#30068"
 msgid "Controller 2 NeGcon Steering Axis Deadzone"
-msgstr ""
+msgstr "Styrenhet 2 NeGcon styraxel dödzon"
 
+#, fuzzy
 msgctxt "#30069"
 msgid "Controller 2 NeGcon Twist Response"
-msgstr ""
+msgstr "Styrenhet 2 NeGcon Twist Svar"
 
+#, fuzzy
 msgctxt "#30071"
 msgid "Controller 3 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 3 Använda analoga pinnar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30072"
 msgid "Controller 3 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 3 Skala för analog axel"
 
+#, fuzzy
 msgctxt "#30073"
 msgid "Controller 3 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 3 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30074"
 msgid "Controller 3 NeGcon Steering Axis Deadzone"
-msgstr ""
+msgstr "Styrenhet 3 NeGcon styraxel dödzon"
 
+#, fuzzy
 msgctxt "#30075"
 msgid "Controller 3 NeGcon Twist Response"
-msgstr ""
+msgstr "Styrenhet 3 NeGcon Twist Svar"
 
+#, fuzzy
 msgctxt "#30077"
 msgid "Controller 4 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 4 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30078"
 msgid "Controller 4 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 4 Skala för analoga axlar"
 
+#, fuzzy
 msgctxt "#30079"
 msgid "Controller 4 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 4 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30080"
 msgid "Controller 4 NeGcon Steering Axis Deadzone"
-msgstr ""
+msgstr "Styrenhet 4 NeGcon styraxel dödzon"
 
+#, fuzzy
 msgctxt "#30081"
 msgid "Controller 4 NeGcon Twist Response"
-msgstr ""
+msgstr "Styrenhet 4 NeGcon Twist Svar"
 
+#, fuzzy
 msgctxt "#30083"
 msgid "Controller 5 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 5 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30084"
 msgid "Controller 5 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 5 Skala för analog axel"
 
+#, fuzzy
 msgctxt "#30085"
 msgid "Controller 5 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 5 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30087"
 msgid "Controller 6 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 6 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30088"
 msgid "Controller 6 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 6 Skala för analog axel"
 
+#, fuzzy
 msgctxt "#30089"
 msgid "Controller 6 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 6 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30091"
 msgid "Controller 7 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 7 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30092"
 msgid "Controller 7 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 7 Skala för analog axel"
 
+#, fuzzy
 msgctxt "#30093"
 msgid "Controller 7 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 7 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30095"
 msgid "Controller 8 Use Analog Sticks for D-Pad in Digital Mode"
-msgstr ""
+msgstr "Controller 8 Använda analoga spakar för D-Pad i digitalt läge"
 
+#, fuzzy
 msgctxt "#30096"
 msgid "Controller 8 Analog Axis Scale"
-msgstr ""
+msgstr "Styrenhet 8 Analog axelskala"
 
+#, fuzzy
 msgctxt "#30097"
 msgid "Controller 8 Vibration Bias"
-msgstr ""
+msgstr "Styrenhet 8 Vibration Bias"
 
+#, fuzzy
 msgctxt "#30098"
 msgid "CD-ROM Async Readahead"
-msgstr ""
+msgstr "CD-ROM Asynk Readahead"
 
+#, fuzzy
 msgctxt "#30099"
 msgid "CPU Overclocking"
-msgstr ""
+msgstr "Överklockning av CPU"
 
+#, fuzzy
 msgctxt "#30100"
 msgid "Apply Compatibility Settings"
-msgstr ""
+msgstr "Tillämpa kompatibilitetsinställningar"
 
+#, fuzzy
 msgctxt "#30101"
 msgid "Log Level"
-msgstr ""
+msgstr "Loggningsivå"
 
+#, fuzzy
 msgctxt "#30102"
 msgid "CPU Recompiler ICache"
-msgstr ""
+msgstr "CPU Rekompilator ICache"
 
+#, fuzzy
 msgctxt "#30103"
 msgid "CPU Recompiler Block Linking"
-msgstr ""
+msgstr "CPU Rekompilator Blocklänkning"
 
+#, fuzzy
 msgctxt "#30104"
 msgid "CPU Recompiler Fast Memory Access"
-msgstr ""
+msgstr "CPU Recompiler Snabb minnesåtkomst"
 
+#, fuzzy
 msgctxt "#30105"
 msgid "CPU Recompiler Fast Memory Access Rewrite"
-msgstr ""
+msgstr "CPU Recompiler Snabb minnesåtkomst Omskrivning"
 
+#, fuzzy
 msgctxt "#30106"
 msgid "Enable VRAM Write Texture Replacement"
-msgstr ""
+msgstr "Aktivera texturbyte för VRAM-skrivning"
 
+#, fuzzy
 msgctxt "#30107"
 msgid "Preload Texture Replacements"
-msgstr ""
+msgstr "Ersättning av texturer vid förladdning"
 
+#, fuzzy
 msgctxt "#30108"
 msgid "Internal Run-Ahead"
-msgstr ""
+msgstr "Internt försprång"
 
+#, fuzzy
 msgctxt "#30109"
 msgid "Enable 8MB RAM (Dev Console)"
-msgstr ""
+msgstr "Aktivera 8 MB RAM (Dev-konsol)"
 
+#, fuzzy
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
-msgstr ""
+msgstr "Använd gamla MDEC-rutiner"
 
+#, fuzzy
 msgctxt "#30111"
 msgid "GunCon Show Crosshair"
-msgstr ""
+msgstr "GunCon Show hårkors"
 
+#, fuzzy
 msgctxt "#30112"
 msgid "Controller 1 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 1 Kraft Analogt läge"
 
+#, fuzzy
 msgctxt "#30113"
 msgid "Controller 2 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 2 Kraft Analogt läge"
 
+#, fuzzy
 msgctxt "#30114"
 msgid "Controller 3 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 3 Force Analog Mode"
 
+#, fuzzy
 msgctxt "#30115"
 msgid "Controller 4 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 4 Kraft Analogt läge"
 
+#, fuzzy
 msgctxt "#30116"
 msgid "Controller 5 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 5 Force Analog Mode"
 
+#, fuzzy
 msgctxt "#30117"
 msgid "Controller 6 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 6 Force Analog Mode"
 
+#, fuzzy
 msgctxt "#30118"
 msgid "Controller 7 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 7 Force Analog Mode"
 
+#, fuzzy
 msgctxt "#30119"
 msgid "Controller 8 Force Analog Mode"
-msgstr ""
+msgstr "Styrenhet 8 Force Analog Mode"
 
+#, fuzzy
 msgctxt "#30120"
 msgid "Use Alternative Audio Hook (Restart)"
-msgstr ""
+msgstr "Använd alternativ ljudkrok (omstart)"
 
+#, fuzzy
 msgctxt "#30123"
 msgid "DualShock Analog Mode Combo"
-msgstr ""
+msgstr "Kombination av analoga lägen för DualShock"
 
+#, fuzzy
 msgctxt "#30124"
 msgid "DualShock Enable Rumble"
-msgstr ""
+msgstr "DualShock aktiverar Rumble"
 
 #~ msgctxt "#30000"
 #~ msgid "Settings"
