@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: game.libretro.swanstation\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: 2023-01-19 19:00i\n"
-"PO-Revision-Date: 2025-04-12 12:26+0000\n"
+"PO-Revision-Date: 2025-04-17 04:27+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-game/game-libretro-swanstation/sv_se/>\n"
 "Language: sv_se\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.11\n"
 
 msgctxt "Addon Summary"
 msgid "Sony - PlayStation (SwanStation)"
@@ -70,12 +70,10 @@ msgctxt "#30010"
 msgid "Pre-cache CHD Images To RAM"
 msgstr "Pre-cache CHD-bilder till RAM"
 
-#, fuzzy
 msgctxt "#30011"
 msgid "Mute CD Audio"
-msgstr "Stäng av ljudet på CD"
+msgstr "Stäng av CD-ljud"
 
-#, fuzzy
 msgctxt "#30012"
 msgid "CD-ROM Read Speedup"
 msgstr "Ökad läshastighet för CD-ROM"
@@ -85,22 +83,18 @@ msgctxt "#30013"
 msgid "CD-ROM Seek Speedup"
 msgstr "Snabbare CD-ROM-sökning"
 
-#, fuzzy
 msgctxt "#30014"
 msgid "CPU Execution Mode"
-msgstr "CPU Exekveringsläge"
+msgstr "CPU-exekveringsläge"
 
-#, fuzzy
 msgctxt "#30015"
 msgid "GPU Renderer"
-msgstr "GPU-rendering"
+msgstr "GPU-renderare"
 
-#, fuzzy
 msgctxt "#30016"
 msgid "Internal Resolution Scale"
-msgstr "Intern upplösning Skala"
+msgstr "Intern upplösningsskala"
 
-#, fuzzy
 msgctxt "#30017"
 msgid "Threaded Rendering (Software)"
 msgstr "Trådad rendering (programvara)"
@@ -115,10 +109,9 @@ msgctxt "#30019"
 msgid "Multisample Antialiasing"
 msgstr "Antialiasing för flera prov"
 
-#, fuzzy
 msgctxt "#30020"
 msgid "True Color Rendering"
-msgstr "Rendering av äkta färg"
+msgstr "True Color-rendering"
 
 msgctxt "#30021"
 msgid "Scaled Dithering"
@@ -128,10 +121,9 @@ msgctxt "#30022"
 msgid "Disable Interlacing"
 msgstr "Inaktivera interlacing"
 
-#, fuzzy
 msgctxt "#30023"
 msgid "Force NTSC Timings"
-msgstr "Forcera NTSC-tidtagning"
+msgstr "Tvinga NTSC-tidtagning"
 
 #, fuzzy
 msgctxt "#30024"
@@ -143,20 +135,17 @@ msgctxt "#30025"
 msgid "Chroma Smoothing For 24-Bit Display"
 msgstr "Chroma-utjämning för 24-bitars skärm"
 
-#, fuzzy
 msgctxt "#30026"
 msgid "Texture Filtering"
 msgstr "Texturfiltrering"
 
-#, fuzzy
 msgctxt "#30027"
 msgid "Widescreen Hack"
-msgstr "Widescreen Hack"
+msgstr "Bredbildshack"
 
-#, fuzzy
 msgctxt "#30028"
 msgid "PGXP Geometry Correction"
-msgstr "PGXP Geometri-korrigering"
+msgstr "PGXP-geometrikorrigering"
 
 #, fuzzy
 msgctxt "#30029"
@@ -173,17 +162,14 @@ msgctxt "#30031"
 msgid "PGXP Perspective Correct Colors"
 msgstr "PGXP Perspektiv Korrigera färger"
 
-#, fuzzy
 msgctxt "#30032"
 msgid "PGXP Depth Buffer"
-msgstr "PGXP Djupbuffert"
+msgstr "PGXP-djupbuffert"
 
-#, fuzzy
 msgctxt "#30033"
 msgid "PGXP Vertex Cache"
 msgstr "PGXP Vertex-cache"
 
-#, fuzzy
 msgctxt "#30034"
 msgid "PGXP CPU Mode"
 msgstr "PGXP CPU-läge"
@@ -218,7 +204,6 @@ msgctxt "#30040"
 msgid "Custom Aspect Ratio Denominator"
 msgstr "Anpassat bildförhållande Nämnare"
 
-#, fuzzy
 msgctxt "#30041"
 msgid "Crop Mode"
 msgstr "Beskärningsläge"
@@ -228,7 +213,6 @@ msgctxt "#30042"
 msgid "Downsampling"
 msgstr "Nedprovning"
 
-#, fuzzy
 msgctxt "#30043"
 msgid "Display OSD Messages"
 msgstr "Visa skärmmeddelanden"
@@ -258,17 +242,14 @@ msgctxt "#30048"
 msgid "Memory Card 1 Type (Restart)"
 msgstr "Typ av minneskort 1 (omstart)"
 
-#, fuzzy
 msgctxt "#30049"
 msgid "Memory Card 2 Type"
-msgstr "Minneskort 2 Typ"
+msgstr "Minneskort 2-typ"
 
-#, fuzzy
 msgctxt "#30050"
 msgid "Use Single Card For Playlist"
 msgstr "Använd ett enda kort för spellista"
 
-#, fuzzy
 msgctxt "#30051"
 msgid "Multitap Mode"
 msgstr "Multitap-läge"
@@ -458,20 +439,17 @@ msgctxt "#30098"
 msgid "CD-ROM Async Readahead"
 msgstr "CD-ROM Asynk Readahead"
 
-#, fuzzy
 msgctxt "#30099"
 msgid "CPU Overclocking"
-msgstr "Överklockning av CPU"
+msgstr "CPU-överklockning"
 
-#, fuzzy
 msgctxt "#30100"
 msgid "Apply Compatibility Settings"
 msgstr "Tillämpa kompatibilitetsinställningar"
 
-#, fuzzy
 msgctxt "#30101"
 msgid "Log Level"
-msgstr "Loggningsivå"
+msgstr "Loggnivå"
 
 #, fuzzy
 msgctxt "#30102"
@@ -503,17 +481,14 @@ msgctxt "#30107"
 msgid "Preload Texture Replacements"
 msgstr "Ersättning av texturer vid förladdning"
 
-#, fuzzy
 msgctxt "#30108"
 msgid "Internal Run-Ahead"
-msgstr "Internt försprång"
+msgstr "Intern Run-Ahead"
 
-#, fuzzy
 msgctxt "#30109"
 msgid "Enable 8MB RAM (Dev Console)"
-msgstr "Aktivera 8 MB RAM (Dev-konsol)"
+msgstr "Aktivera 8 MB RAM (utvecklingskonsol)"
 
-#, fuzzy
 msgctxt "#30110"
 msgid "Use Old MDEC Routines"
 msgstr "Använd gamla MDEC-rutiner"
@@ -568,10 +543,9 @@ msgctxt "#30120"
 msgid "Use Alternative Audio Hook (Restart)"
 msgstr "Använd alternativ ljudkrok (omstart)"
 
-#, fuzzy
 msgctxt "#30123"
 msgid "DualShock Analog Mode Combo"
-msgstr "Kombination av analoga lägen för DualShock"
+msgstr "DualShock Analog lägeskombination"
 
 #, fuzzy
 msgctxt "#30124"
