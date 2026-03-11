@@ -18,6 +18,7 @@
 		<extensions>exe|psexe|cue|bin|img|iso|chd|pbp|ecm|mds|psf|m3u</extensions>
 		<supports_vfs>false</supports_vfs>
 		<supports_standalone>false</supports_standalone>
+		<supports_disc_control>true</supports_disc_control>
 		<requires_opengl>false</requires_opengl>
 	</extension>
 	<extension point="xbmc.addon.metadata">
