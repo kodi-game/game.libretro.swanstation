@@ -173,9 +173,9 @@
 					<default>Recompiler</default>
 					<constraints>
 						<options>
-							<option>Interpreter</option>
+							<option label="30491">Interpreter</option>
 							<option label="30163">CachedInterpreter</option>
-							<option>Recompiler</option>
+							<option label="30492">Recompiler</option>
 						</options>
 					</constraints>
 					<control type="list" format="string" />
