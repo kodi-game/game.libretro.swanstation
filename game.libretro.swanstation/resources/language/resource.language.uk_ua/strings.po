@@ -1936,3 +1936,11 @@ msgstr ""
 msgctxt "#30490"
 msgid "Use a faster and more efficient to submit audio samples to the frontend. Mostly safe to enable, but may hang for a select few games that rely on the old method to function. Requires the core to be restarted to apply."
 msgstr ""
+
+msgctxt "#30491"
+msgid "Interpreter"
+msgstr ""
+
+msgctxt "#30492"
+msgid "Recompiler"
+msgstr ""
