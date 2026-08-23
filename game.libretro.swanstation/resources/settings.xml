@@ -740,7 +740,7 @@
 					<default>Disabled</default>
 					<constraints>
 						<options>
-							<option>Disabled</option>
+							<option label="13106">Disabled</option>
 							<option label="30263">Box</option>
 							<option label="30264">Adaptive</option>
 						</options>
@@ -1085,7 +1085,7 @@
 					<default>Disabled</default>
 					<constraints>
 						<options>
-							<option>Disabled</option>
+							<option label="13106">Disabled</option>
 							<option label="30281">Port1Only</option>
 							<option label="30282">Port2Only</option>
 							<option label="30283">BothPorts</option>
