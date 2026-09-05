@@ -1,1 +1,1 @@
-swanstation https://github.com/kodi-game/swanstation/archive/fc37fce91dedeba6e4007012cfed8de626fb45cf.tar.gz
+swanstation https://github.com/kodi-game/swanstation/archive/7f69c199ed88d5723f71dd3a6e9c1b7a45b535a6.tar.gz

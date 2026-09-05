@@ -24,6 +24,7 @@
 							<option label="30133">scph5500.bin</option>
 							<option label="30134">psxonpsp660.bin</option>
 							<option label="30135">ps1_rom.bin</option>
+							<option label="30493">openbios.bin</option>
 						</options>
 					</constraints>
 					<control type="list" format="string" />
@@ -36,6 +37,7 @@
 							<option label="30137">scph5501.bin</option>
 							<option label="30134">psxonpsp660.bin</option>
 							<option label="30135">ps1_rom.bin</option>
+							<option label="30493">openbios.bin</option>
 						</options>
 					</constraints>
 					<control type="list" format="string" />
@@ -48,6 +50,7 @@
 							<option label="30139">scph5502.bin</option>
 							<option label="30134">psxonpsp660.bin</option>
 							<option label="30135">ps1_rom.bin</option>
+							<option label="30493">openbios.bin</option>
 						</options>
 					</constraints>
 					<control type="list" format="string" />
@@ -747,6 +750,18 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
+				<setting id="swanstation_GPU_ShaderPrecompile" type="string" label="30494" help="30495">
+					<level>0</level>
+					<default>Lazy</default>
+					<constraints>
+						<options>
+							<option label="30496">Lazy</option>
+							<option label="30497">Enabled</option>
+							<option label="30498">Disabled</option>
+						</options>
+					</constraints>
+					<control type="list" format="string" />
+				</setting>
 				<setting id="swanstation_Display_ShowOSDMessages" type="string" label="30043" help="30265">
 					<level>0</level>
 					<default>true</default>
@@ -1093,7 +1108,7 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_Controller_AnalogCombo" type="string" label="30123" help="30284">
+				<setting id="swanstation_Controller_AnalogCombo" type="string" label="30499" help="30284">
 					<level>0</level>
 					<default>3</default>
 					<constraints>
@@ -1113,7 +1128,7 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_Controller_EnableRumble" type="string" label="30124" help="30296">
+				<setting id="swanstation_Controller_EnableRumble" type="string" label="30500" help="30501">
 					<level>0</level>
 					<default>true</default>
 					<constraints>
@@ -1159,7 +1174,7 @@
 				</setting>
 				<setting id="swanstation_Controller1_AxisScale" type="string" label="30056" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -1718,7 +1733,7 @@
 				</setting>
 				<setting id="swanstation_Controller2_AxisScale" type="string" label="30064" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -2277,7 +2292,7 @@
 				</setting>
 				<setting id="swanstation_Controller3_AxisScale" type="string" label="30072" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -2616,7 +2631,7 @@
 				</setting>
 				<setting id="swanstation_Controller4_AxisScale" type="string" label="30078" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -2955,7 +2970,7 @@
 				</setting>
 				<setting id="swanstation_Controller5_AxisScale" type="string" label="30084" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -3173,7 +3188,7 @@
 				</setting>
 				<setting id="swanstation_Controller6_AxisScale" type="string" label="30088" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -3391,7 +3406,7 @@
 				</setting>
 				<setting id="swanstation_Controller7_AxisScale" type="string" label="30092" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -3609,7 +3624,7 @@
 				</setting>
 				<setting id="swanstation_Controller8_AxisScale" type="string" label="30096" help="30300">
 					<level>0</level>
-					<default>1.00</default>
+					<default>1.33</default>
 					<constraints>
 						<options>
 							<option>1.00</option>
@@ -4023,12 +4038,12 @@
 				</setting>
 				<setting id="swanstation_CPU_FastmemMode" type="string" label="30104" help="30469">
 					<level>0</level>
-					<default>MMap</default>
+					<default>LUT</default>
 					<constraints>
 						<options>
 							<option label="30470">Disabled</option>
 							<option label="30471">LUT</option>
-							<option label="30472">MMap</option>
+							<option label="30502">MMap</option>
 						</options>
 					</constraints>
 					<control type="list" format="string" />
@@ -4044,7 +4059,7 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_TextureReplacements_EnableVRAMWriteReplacements" type="string" label="30106" help="30474">
+				<setting id="swanstation_TextureReplacements_EnableVRAMWriteReplacements" type="string" label="30106" help="30503">
 					<level>0</level>
 					<default>false</default>
 					<constraints>
@@ -4066,7 +4081,7 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_Main_RunaheadFrameCount" type="string" label="30108" help="30476">
+				<setting id="swanstation_Main_RunaheadFrameCount" type="string" label="30108" help="30504">
 					<level>0</level>
 					<default>0</default>
 					<constraints>
@@ -4097,9 +4112,9 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_Hacks_UseOldMDECRoutines" type="string" label="30110" help="30489">
+				<setting id="swanstation_Hacks_OldMDECRoutines" type="string" label="30110" help="30505">
 					<level>0</level>
-					<default>false</default>
+					<default>true</default>
 					<constraints>
 						<options>
 							<option label="30141">true</option>
@@ -4108,7 +4123,7 @@
 					</constraints>
 					<control type="list" format="string" />
 				</setting>
-				<setting id="swanstation_Audio_FastHook" type="string" label="30120" help="30490">
+				<setting id="swanstation_Audio_FastHook" type="string" label="30506" help="30507">
 					<level>0</level>
 					<default>true</default>
 					<constraints>
