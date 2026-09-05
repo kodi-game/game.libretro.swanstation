@@ -1,0 +1,26 @@
+From afc2f50bcef8827e7e735a34141764ce16711d42 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <themagnificentmrb@gmail.com>
+Date: Thu, 26 Jan 2023 14:41:00 -0800
+Subject: [PATCH 2/2] Don't special-case Android library name
+
+---
+ src/libretro/CMakeLists.txt | 5 -----
+ 1 file changed, 5 deletions(-)
+
+diff --git a/src/libretro/CMakeLists.txt b/src/libretro/CMakeLists.txt
+index b9cdf7bd..bcd0d402 100644
+--- a/src/libretro/CMakeLists.txt
++++ b/src/libretro/CMakeLists.txt
+@@ -37,9 +37,4 @@ if(WIN32)
+   set_target_properties(swanstation_libretro PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}")
+ endif()
+ 
+-# for android, suffix _android
+-if(ANDROID)
+-  set_target_properties(swanstation_libretro PROPERTIES OUTPUT_NAME "swanstation_libretro_android")
+-endif()
+-
+ install(TARGETS swanstation_libretro DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-- 
+2.34.1
+
