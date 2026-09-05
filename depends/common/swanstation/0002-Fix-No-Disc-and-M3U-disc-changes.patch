@@ -1,0 +1,402 @@
+From 1f000c4de1941878e44797defe9ebbac5fae94dc Mon Sep 17 00:00:00 2001
+From: Garrett Brown <themagnificentmrb@gmail.com>
+Date: Sat, 5 Sep 2026 03:49:32 -0700
+Subject: [PATCH 2/3] Fix No Disc and M3U disc changes
+
+The disc callbacks treated "no mounted image" as an open tray, so an
+empty tray could never be closed. M3U files also went through the same
+read-only path as multi-disc PBP files, which blocked playlist edits.
+
+Track the tray separately and open M3U entries as individual images.
+Keep No Disc selected when entries are added or removed, check the
+initial-disc path before using it, and retain the playlist title for
+memory cards. Keep the CD-ROM's existing swap delay when reporting
+the shell status.
+
+Tested with the two-disc Metal Gear Solid playlist, including an empty
+drive, both tray states, playlist edits and invalid initial-disc hints.
+The tests also check the emulated shell status and memory-card files.
+---
+ src/core/cdrom.cpp                       |  11 ++-
+ src/core/cdrom.h                         |   3 +
+ src/core/host_interface.h                |   2 +
+ src/core/system.cpp                      |   6 ++
+ src/core/system.h                        |   1 +
+ src/libretro/libretro_host_interface.cpp | 108 ++++++++++++-----------
+ 6 files changed, 75 insertions(+), 56 deletions(-)
+
+diff --git a/src/core/cdrom.cpp b/src/core/cdrom.cpp
+index 59ca133c..132f05d7 100644
+--- a/src/core/cdrom.cpp
++++ b/src/core/cdrom.cpp
+@@ -96,6 +96,7 @@ void CDROM::Initialize()
+ 
+ void CDROM::Shutdown()
+ {
++  m_shell_open = false;
+   m_command_event.reset();
+   m_command_second_response_event.reset();
+   m_drive_event.reset();
+@@ -112,7 +113,7 @@ void CDROM::Reset()
+   m_status.bits = 0;
+   m_secondary_status.bits = 0;
+   m_secondary_status.motor_on = CanReadMedia();
+-  m_secondary_status.shell_open = !CanReadMedia();
++  m_secondary_status.shell_open = m_shell_open;
+   m_mode.bits = 0;
+   m_mode.read_raw_sector = true;
+   m_interrupt_enable_register = INTERRUPT_REGISTER_MASK;
+@@ -170,7 +171,7 @@ void CDROM::SoftReset(TickCount ticks_late)
+   ClearDriveState();
+   m_secondary_status.bits = 0;
+   m_secondary_status.motor_on = CanReadMedia();
+-  m_secondary_status.shell_open = !CanReadMedia();
++  m_secondary_status.shell_open = m_shell_open;
+   m_mode.bits = 0;
+   m_mode.read_raw_sector = true;
+   m_pending_async_interrupt = 0;
+@@ -324,6 +325,7 @@ void CDROM::InsertMedia(std::unique_ptr<CDImage> media)
+ {
+   if (CanReadMedia())
+     RemoveMedia(true);
++  m_shell_open = false;
+ 
+   // set the region from the system area of the disc
+   m_disc_region = System::GetRegionForImage(media.get());
+@@ -338,8 +340,9 @@ void CDROM::InsertMedia(std::unique_ptr<CDImage> media)
+ 
+ std::unique_ptr<CDImage> CDROM::RemoveMedia(bool for_disc_swap)
+ {
+-  if (!HasMedia())
++  if (!HasMedia() && m_shell_open)
+     return nullptr;
++  m_shell_open = true;
+ 
+   // Add an additional two seconds to the disc swap, some games don't like it happening too quickly.
+   TickCount stop_ticks = GetTicksForStop(true);
+@@ -865,7 +868,7 @@ void CDROM::ExecuteCommand(TickCount ticks_late)
+       SendACKAndStat();
+ 
+       // shell open bit is cleared after sending the status
+-      if (CanReadMedia())
++      if (!m_shell_open && m_drive_state != DriveState::ShellOpening)
+         m_secondary_status.shell_open = false;
+ 
+       EndCommand();
+diff --git a/src/core/cdrom.h b/src/core/cdrom.h
+index 7552fe72..f94a3c87 100644
+--- a/src/core/cdrom.h
++++ b/src/core/cdrom.h
+@@ -32,6 +32,7 @@ public:
+ 
+   void InsertMedia(std::unique_ptr<CDImage> media);
+   std::unique_ptr<CDImage> RemoveMedia(bool for_disc_swap);
++  void SetShellOpen(bool opened) { m_shell_open = opened; }
+ 
+   void CPUClockChanged();
+ 
+@@ -373,6 +374,8 @@ private:
+   std::array<SectorBuffer, NUM_SECTOR_BUFFERS> m_sector_buffers;
+ 
+   CDROMAsyncReader m_reader;
++  // The status bit stays latched until Getstat acknowledges a closed shell.
++  bool m_shell_open = false;
+ 
+   // two 16-bit samples packed in 32-bits
+   HeapFIFOQueue<uint32_t, AUDIO_FIFO_SIZE> m_audio_fifo;
+diff --git a/src/core/host_interface.h b/src/core/host_interface.h
+index 6b00b18d..c93ca583 100644
+--- a/src/core/host_interface.h
++++ b/src/core/host_interface.h
+@@ -49,9 +49,11 @@ public:
+   struct DiskControlInfo
+   {
+     bool has_sub_images;
++    bool ejected;
+     uint32_t initial_image_index;
+     uint32_t image_index;
+     uint32_t image_count;
++    std::string initial_image_path;
+     std::string sub_images_parent_path;
+     std::vector<std::string> image_paths;
+     std::vector<std::string> image_labels;
+diff --git a/src/core/system.cpp b/src/core/system.cpp
+index 01d32e49..4bbfa9c4 100644
+--- a/src/core/system.cpp
++++ b/src/core/system.cpp
+@@ -1600,6 +1600,12 @@ void RemoveMedia()
+   ClearMemorySaveStates();
+ }
+ 
++void SetMediaTrayOpen(bool opened)
++{
++  g_cdrom.SetShellOpen(opened);
++  ClearMemorySaveStates();
++}
++
+ void UpdateRunningGame(const char* path, CDImage* image)
+ {
+   if (s_running_game_path == path)
+diff --git a/src/core/system.h b/src/core/system.h
+index 7d7987b8..c5cc52cf 100644
+--- a/src/core/system.h
++++ b/src/core/system.h
+@@ -117,6 +117,7 @@ bool HasMedia();
+ std::string GetMediaFileName();
+ bool InsertMedia(const char* path);
+ void RemoveMedia();
++void SetMediaTrayOpen(bool opened);
+ 
+ /// Returns true if this is a multi-subimage image (e.g. m3u).
+ bool HasMediaSubImages();
+diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
+index 8e672569..f5f98063 100644
+--- a/src/libretro/libretro_host_interface.cpp
++++ b/src/libretro/libretro_host_interface.cpp
+@@ -1,4 +1,3 @@
+-#include "core/host_interface.h"
+ #include "common/byte_stream.h"
+ #include "common/file_system.h"
+ #include "common/log.h"
+@@ -11,6 +10,9 @@
+ #include "core/cheats.h"
+ #include "core/digital_controller.h"
+ #include "core/gpu.h"
++#include "core/gpu_hw_opengl.h"
++#include "core/gpu_hw_vulkan.h"
++#include "core/host_interface.h"
+ #include "core/namco_guncon.h"
+ #include "core/negcon.h"
+ #include "core/negcon_rumble.h"
+@@ -20,9 +22,7 @@
+ #include "libretro_audio_stream.h"
+ #include "libretro_game_settings.h"
+ #include "libretro_host_display.h"
+-#include "core/gpu_hw_opengl.h"
+ #include "libretro_settings_interface.h"
+-#include "core/gpu_hw_vulkan.h"
+ #include "version.h"
+ #include <array>
+ #include <cstring>
+@@ -361,14 +361,7 @@ void HostInterface::InitLogging()
+ 
+ bool HostInterface::Initialize()
+ {
+-  /* Reset disk control info struct */
+-  P_THIS->m_disk_control_info.has_sub_images      = false;
+-  P_THIS->m_disk_control_info.initial_image_index = 0;
+-  P_THIS->m_disk_control_info.image_index         = 0;
+-  P_THIS->m_disk_control_info.image_count         = 0;
+-  P_THIS->m_disk_control_info.sub_images_parent_path.clear();
+-  P_THIS->m_disk_control_info.image_paths.clear();
+-  P_THIS->m_disk_control_info.image_labels.clear();
++  P_THIS->m_disk_control_info = {};
+ 
+   InitLogging();
+   InitInterfaces();
+@@ -388,14 +381,7 @@ void HostInterface::Shutdown()
+   if (!System::IsShutdown())
+     System::Shutdown();
+ 
+-  /* Reset disk control info struct */
+-  P_THIS->m_disk_control_info.has_sub_images      = false;
+-  P_THIS->m_disk_control_info.initial_image_index = 0;
+-  P_THIS->m_disk_control_info.image_index         = 0;
+-  P_THIS->m_disk_control_info.image_count         = 0;
+-  P_THIS->m_disk_control_info.sub_images_parent_path.clear();
+-  P_THIS->m_disk_control_info.image_paths.clear();
+-  P_THIS->m_disk_control_info.image_labels.clear();
++  P_THIS->m_disk_control_info = {};
+ 
+   ResetLibretroLogging();
+ }
+@@ -422,6 +408,11 @@ void HostInterface::GetGameInfo(const char* path, CDImage* image, std::string* c
+ {
+   // Just use the filename for now... we don't have the game list. Unless we can pull this from the frontend somehow?
+   *title = FileSystem::GetFileTitleFromPath(path);
++  if (g_settings.memory_card_use_playlist_title && !m_disk_control_info.has_sub_images &&
++      !m_disk_control_info.sub_images_parent_path.empty())
++  {
++    *title = FileSystem::GetFileTitleFromPath(m_disk_control_info.sub_images_parent_path);
++  }
+ 
+   if (image)
+     *code = System::GetGameCodeForImage(image, true);
+@@ -715,7 +706,9 @@ bool HostInterface::retro_load_game(const struct retro_game_info* game)
+   // already handles an empty filename as a BIOS boot.
+   if (game && game->path)
+     bp->filename = game->path;
+-  bp->media_playlist_index = P_THIS->m_disk_control_info.initial_image_index;
++  const uint32_t initial_index = m_disk_control_info.initial_image_index;
++  const std::string initial_path = std::move(m_disk_control_info.initial_image_path);
++  m_disk_control_info = {};
+   bp->force_software_renderer = !m_hw_render_callback_valid;
+ 
+   struct retro_input_descriptor desc[] = {
+@@ -771,7 +764,8 @@ bool HostInterface::retro_load_game(const struct retro_game_info* game)
+         return false;
+       }
+ 
+-      P_THIS->m_disk_control_info.has_sub_images         = true;
++      const char* extension = std::strrchr(parent_path.c_str(), '.');
++      P_THIS->m_disk_control_info.has_sub_images = !extension || StringUtil::Strcasecmp(extension, ".m3u") != 0;
+       P_THIS->m_disk_control_info.image_index            = System::GetMediaSubImageIndex();
+       P_THIS->m_disk_control_info.image_count            = System::GetMediaSubImageCount();
+       P_THIS->m_disk_control_info.sub_images_parent_path = parent_path;
+@@ -822,6 +816,16 @@ bool HostInterface::retro_load_game(const struct retro_game_info* game)
+     }
+   }
+ 
++  if (initial_index < m_disk_control_info.image_count &&
++      m_disk_control_info.image_paths[initial_index] == initial_path && initial_index != 0)
++  {
++    if (!DiskControlSetEjectState(true) || !DiskControlSetImageIndex(initial_index) || !DiskControlSetEjectState(false))
++    {
++      DestroySystem();
++      return false;
++    }
++  }
++
+   struct retro_core_option_display option_display;
+   option_display.visible = false;
+   switch (System::GetRegion())
+@@ -2214,54 +2218,52 @@ bool HostInterface::DiskControlSetEjectState(bool ejected)
+   if (System::IsShutdown())
+     return false;
+ 
++  DiskControlInfo& info = P_THIS->m_disk_control_info;
++  if (info.ejected == ejected)
++    return true;
++
+   if (ejected)
+   {
+-    if (!System::HasMedia())
+-      return false;
+-
+     System::RemoveMedia();
+   }
+-  else
++  else if (info.image_index < info.image_count)
+   {
+-    if (System::HasMedia())
+-      return false;
+-
+-    if (P_THIS->m_disk_control_info.has_sub_images)
++    if (info.has_sub_images)
+     {
+-      if (!System::InsertMedia(P_THIS->m_disk_control_info.sub_images_parent_path.c_str()))
++      if (!System::InsertMedia(info.sub_images_parent_path.c_str()))
+         return false;
+-
+-      if (!System::SwitchMediaSubImage(P_THIS->m_disk_control_info.image_index))
++      if (!System::SwitchMediaSubImage(info.image_index))
++      {
++        System::RemoveMedia();
+         return false;
++      }
+     }
+-    else if (!System::InsertMedia(P_THIS->m_disk_control_info.image_paths[P_THIS->m_disk_control_info.image_index].c_str()))
++    else if (!System::InsertMedia(info.image_paths[info.image_index].c_str()))
+       return false;
+   }
+ 
++  info.ejected = ejected;
++  System::SetMediaTrayOpen(ejected);
+   return true;
+ }
+ 
+ bool HostInterface::DiskControlGetEjectState()
+ {
+-  if (System::IsShutdown())
+-    return false;
+-
+-  return !System::HasMedia();
++  return !System::IsShutdown() && P_THIS->m_disk_control_info.ejected;
+ }
+ 
+ unsigned HostInterface::DiskControlGetImageIndex()
+ {
+-  return (unsigned)P_THIS->m_disk_control_info.image_index;
++  return P_THIS->m_disk_control_info.image_index;
+ }
+ 
+ bool HostInterface::DiskControlSetImageIndex(unsigned index)
+ {
+-  if (System::IsShutdown() ||
+-      System::HasMedia() ||
+-      (index >= P_THIS->m_disk_control_info.image_count))
++  DiskControlInfo& info = P_THIS->m_disk_control_info;
++  if (System::IsShutdown() || !info.ejected || (index < info.image_count && info.image_paths[index].empty()))
+     return false;
+ 
+-  P_THIS->m_disk_control_info.image_index = (uint32_t)index;
++  info.image_index = std::min(index, info.image_count);
+   return true;
+ }
+ 
+@@ -2278,8 +2280,7 @@ bool HostInterface::DiskControlReplaceImageIndex(unsigned index, const retro_gam
+ #define CASE_COMPARE strcasecmp
+ #endif
+ 
+-  if (System::IsShutdown() ||
+-      System::HasMedia() ||
++  if (System::IsShutdown() || !P_THIS->m_disk_control_info.ejected ||
+       (index >= P_THIS->m_disk_control_info.image_count))
+     return false;
+ 
+@@ -2292,7 +2293,9 @@ bool HostInterface::DiskControlReplaceImageIndex(unsigned index, const retro_gam
+     /* Remove specified image */
+     P_THIS->m_disk_control_info.image_count--;
+ 
+-    if (index < P_THIS->m_disk_control_info.image_index)
++    if (index == P_THIS->m_disk_control_info.image_index)
++      P_THIS->m_disk_control_info.image_index = P_THIS->m_disk_control_info.image_count;
++    else if (index < P_THIS->m_disk_control_info.image_index)
+       P_THIS->m_disk_control_info.image_index--;
+ 
+     P_THIS->m_disk_control_info.image_paths.erase(
+@@ -2332,6 +2335,8 @@ bool HostInterface::DiskControlAddImageIndex()
+   if (P_THIS->m_disk_control_info.has_sub_images)
+     return false;
+ 
++  if (P_THIS->m_disk_control_info.image_index == P_THIS->m_disk_control_info.image_count)
++    P_THIS->m_disk_control_info.image_index++;
+   P_THIS->m_disk_control_info.image_count++;
+   P_THIS->m_disk_control_info.image_paths.push_back("");
+   P_THIS->m_disk_control_info.image_labels.push_back("");
+@@ -2340,18 +2345,17 @@ bool HostInterface::DiskControlAddImageIndex()
+ 
+ bool HostInterface::DiskControlSetInitialImage(unsigned index, const char* path)
+ {
+-  /* Note: 'path' is ignored, since we cannot
+-   * determine the actual set path until after
+-   * content is loaded by the core emulation
+-   * code (at which point it is too late to
+-   * compare it with the value supplied here) */
++  if (!System::IsShutdown() || !path || !path[0])
++    return false;
++
+   P_THIS->m_disk_control_info.initial_image_index = index;
++  P_THIS->m_disk_control_info.initial_image_path = path;
+   return true;
+ }
+ 
+ bool HostInterface::DiskControlGetImagePath(unsigned index, char* path, size_t len)
+ {
+-  if ((index >= P_THIS->m_disk_control_info.image_count) ||
++  if (!path || len == 0 || (index >= P_THIS->m_disk_control_info.image_count) ||
+       (index >= P_THIS->m_disk_control_info.image_paths.size()) ||
+       P_THIS->m_disk_control_info.image_paths[index].empty())
+     return false;
+@@ -2362,7 +2366,7 @@ bool HostInterface::DiskControlGetImagePath(unsigned index, char* path, size_t l
+ 
+ bool HostInterface::DiskControlGetImageLabel(unsigned index, char* label, size_t len)
+ {
+-  if ((index >= P_THIS->m_disk_control_info.image_count) ||
++  if (!label || len == 0 || (index >= P_THIS->m_disk_control_info.image_count) ||
+       (index >= P_THIS->m_disk_control_info.image_labels.size()) ||
+       P_THIS->m_disk_control_info.image_labels[index].empty())
+     return false;
+-- 
+2.50.1 (Apple Git-155)
+
