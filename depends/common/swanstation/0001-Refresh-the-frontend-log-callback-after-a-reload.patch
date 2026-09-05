@@ -1,0 +1,75 @@
+From 1616ea191514f46d857067e62212b7c2d957aea6 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <themagnificentmrb@gmail.com>
+Date: Sat, 5 Sep 2026 05:00:02 -0700
+Subject: [PATCH] Refresh the frontend log callback after a reload
+
+Kodi can replace its libretro frontend while leaving the core loaded.
+The logging bridge kept the first frontend's callback after
+retro_deinit(), so the next game could call a stale function pointer.
+
+Unregister it at shutdown and ask the current frontend for a logger
+again on initialization. Refresh it when the environment changes as
+well, and allow the new frontend to omit logging.
+
+Tested repeated loads with replaced and disabled log callbacks, then
+reinitialized the same environment. Checked that each event is sent
+once and nothing is delivered after shutdown. The disc tests pass.
+---
+ src/libretro/libretro_host_interface.cpp | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
+index a0613fb4..8e672569 100644
+--- a/src/libretro/libretro_host_interface.cpp
++++ b/src/libretro/libretro_host_interface.cpp
+@@ -241,6 +241,15 @@ static void LibretroLogCallback(void* pUserParam, const char* channelName, const
+                               (level <= LogLevel::Perf) ? functionName : channelName, message);
+ }
+ 
++static void ResetLibretroLogging()
++{
++  if (s_libretro_log_callback_registered)
++    Log::UnregisterCallback(LibretroLogCallback, nullptr);
++  s_libretro_log_callback = {};
++  s_libretro_log_callback_registered = false;
++  s_libretro_log_callback_valid = false;
++}
++
+ HostInterface::HostInterface()
+ {
+   g_host_interface = this;
+@@ -337,11 +346,11 @@ void HostInterface::InitInterfaces()
+ 
+ void HostInterface::InitLogging()
+ {
+-  if (s_libretro_log_callback_registered)
+-    return;
++  ResetLibretroLogging();
+ 
+   s_libretro_log_callback_valid =
+-    g_retro_environment_callback(RETRO_ENVIRONMENT_GET_LOG_INTERFACE, &s_libretro_log_callback);
++    g_retro_environment_callback(RETRO_ENVIRONMENT_GET_LOG_INTERFACE, &s_libretro_log_callback) &&
++    s_libretro_log_callback.log;
+ 
+   if (s_libretro_log_callback_valid)
+   {
+@@ -361,6 +370,7 @@ bool HostInterface::Initialize()
+   P_THIS->m_disk_control_info.image_paths.clear();
+   P_THIS->m_disk_control_info.image_labels.clear();
+ 
++  InitLogging();
+   InitInterfaces();
+   LoadSettings();
+   FixIncompatibleSettings(true);
+@@ -386,6 +396,8 @@ void HostInterface::Shutdown()
+   P_THIS->m_disk_control_info.sub_images_parent_path.clear();
+   P_THIS->m_disk_control_info.image_paths.clear();
+   P_THIS->m_disk_control_info.image_labels.clear();
++
++  ResetLibretroLogging();
+ }
+ 
+ void HostInterface::ReportError(const char* message)
+-- 
+2.50.1 (Apple Git-155)
+
