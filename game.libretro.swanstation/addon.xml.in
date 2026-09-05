@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="game.libretro.swanstation"
 		name="Sony - PlayStation (SwanStation)"
-		version="1.0.0.38"
+		version="1.0.0.39"
 		provider-name="stenzek">
 	<requires>
 		<import addon="game.libretro" version="1.0.0"/>
@@ -14,7 +14,7 @@
 	</requires>
 	<extension point="kodi.gameclient"
 			library_@PLATFORM@="@LIBRARY_FILENAME@">
-		<platforms>PlayStation</platforms>
+		<platforms>Sony - PlayStation</platforms>
 		<extensions>exe|psexe|cue|bin|img|iso|chd|pbp|ecm|mds|psf|m3u</extensions>
 		<supports_vfs>false</supports_vfs>
 		<supports_standalone>true</supports_standalone>
