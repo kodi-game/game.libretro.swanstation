@@ -1,7 +1,7 @@
 From 1616ea191514f46d857067e62212b7c2d957aea6 Mon Sep 17 00:00:00 2001
 From: Garrett Brown <themagnificentmrb@gmail.com>
 Date: Sat, 5 Sep 2026 05:00:02 -0700
-Subject: [PATCH] Refresh the frontend log callback after a reload
+Subject: [PATCH 1/6] Refresh the frontend log callback after a reload
 
 Kodi can replace its libretro frontend while leaving the core loaded.
 The logging bridge kept the first frontend's callback after

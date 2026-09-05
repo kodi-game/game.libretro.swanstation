@@ -1,0 +1,117 @@
+From e8e25042003f726c799ebd203bcf1c8ff8e87d45 Mon Sep 17 00:00:00 2001
+From: Garrett Brown <themagnificentmrb@gmail.com>
+Date: Sat, 5 Sep 2026 05:37:06 -0700
+Subject: [PATCH 5/6] Validate initial disc hints against the loaded image path
+
+The initial-image callback ignored its path argument and passed the
+index straight to boot. A mismatched path selected the wrong disc, and
+an out-of-range index could prevent the game from loading.
+
+Boot the default image, then use the requested index only when its path
+matches the loaded list. Invalid hints leave the first disc selected.
+Clear pending hint data with the rest of the disc control state.
+
+Tested valid, mismatched and out-of-range hints with Metal Gear Solid.
+Checked the mounted image as well as the frontend's selected index.
+---
+ src/core/host_interface.h                |  1 +
+ src/libretro/libretro_host_interface.cpp | 42 ++++++++++--------------
+ 2 files changed, 19 insertions(+), 24 deletions(-)
+
+diff --git a/src/core/host_interface.h b/src/core/host_interface.h
+index 89257660..c93ca583 100644
+--- a/src/core/host_interface.h
++++ b/src/core/host_interface.h
+@@ -53,6 +53,7 @@ public:
+     uint32_t initial_image_index;
+     uint32_t image_index;
+     uint32_t image_count;
++    std::string initial_image_path;
+     std::string sub_images_parent_path;
+     std::vector<std::string> image_paths;
+     std::vector<std::string> image_labels;
+diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
+index e155eeca..72008410 100644
+--- a/src/libretro/libretro_host_interface.cpp
++++ b/src/libretro/libretro_host_interface.cpp
+@@ -361,15 +361,7 @@ void HostInterface::InitLogging()
+ 
+ bool HostInterface::Initialize()
+ {
+-  /* Reset disk control info struct */
+-  P_THIS->m_disk_control_info.has_sub_images      = false;
+-  P_THIS->m_disk_control_info.ejected             = false;
+-  P_THIS->m_disk_control_info.initial_image_index = 0;
+-  P_THIS->m_disk_control_info.image_index         = 0;
+-  P_THIS->m_disk_control_info.image_count         = 0;
+-  P_THIS->m_disk_control_info.sub_images_parent_path.clear();
+-  P_THIS->m_disk_control_info.image_paths.clear();
+-  P_THIS->m_disk_control_info.image_labels.clear();
++  P_THIS->m_disk_control_info = {};
+ 
+   InitLogging();
+   InitInterfaces();
+@@ -389,15 +381,7 @@ void HostInterface::Shutdown()
+   if (!System::IsShutdown())
+     System::Shutdown();
+ 
+-  /* Reset disk control info struct */
+-  P_THIS->m_disk_control_info.has_sub_images      = false;
+-  P_THIS->m_disk_control_info.ejected             = false;
+-  P_THIS->m_disk_control_info.initial_image_index = 0;
+-  P_THIS->m_disk_control_info.image_index         = 0;
+-  P_THIS->m_disk_control_info.image_count         = 0;
+-  P_THIS->m_disk_control_info.sub_images_parent_path.clear();
+-  P_THIS->m_disk_control_info.image_paths.clear();
+-  P_THIS->m_disk_control_info.image_labels.clear();
++  P_THIS->m_disk_control_info = {};
+ 
+   ResetLibretroLogging();
+ }
+@@ -722,7 +706,8 @@ bool HostInterface::retro_load_game(const struct retro_game_info* game)
+   // already handles an empty filename as a BIOS boot.
+   if (game && game->path)
+     bp->filename = game->path;
+-  bp->media_playlist_index = P_THIS->m_disk_control_info.initial_image_index;
++  const uint32_t initial_index = m_disk_control_info.initial_image_index;
++  const std::string initial_path = std::move(m_disk_control_info.initial_image_path);
+   m_disk_control_info = {};
+   bp->force_software_renderer = !m_hw_render_callback_valid;
+ 
+@@ -831,6 +816,16 @@ bool HostInterface::retro_load_game(const struct retro_game_info* game)
+     }
+   }
+ 
++  if (initial_index < m_disk_control_info.image_count &&
++      m_disk_control_info.image_paths[initial_index] == initial_path && initial_index != 0)
++  {
++    if (!DiskControlSetEjectState(true) || !DiskControlSetImageIndex(initial_index) || !DiskControlSetEjectState(false))
++    {
++      DestroySystem();
++      return false;
++    }
++  }
++
+   struct retro_core_option_display option_display;
+   option_display.visible = false;
+   switch (System::GetRegion())
+@@ -2355,12 +2350,11 @@ bool HostInterface::DiskControlAddImageIndex()
+ 
+ bool HostInterface::DiskControlSetInitialImage(unsigned index, const char* path)
+ {
+-  /* Note: 'path' is ignored, since we cannot
+-   * determine the actual set path until after
+-   * content is loaded by the core emulation
+-   * code (at which point it is too late to
+-   * compare it with the value supplied here) */
++  if (!System::IsShutdown() || !path || !path[0])
++    return false;
++
+   P_THIS->m_disk_control_info.initial_image_index = index;
++  P_THIS->m_disk_control_info.initial_image_path = path;
+   return true;
+ }
+ 
+-- 
+2.50.1 (Apple Git-155)
+

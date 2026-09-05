@@ -1,7 +1,7 @@
-From 9e4ca7ebbb8a0180ad11e763a93a0400bdff8179 Mon Sep 17 00:00:00 2001
+From b95a1ad27aaabe639f40e92ef6bb21a31b0066f5 Mon Sep 17 00:00:00 2001
 From: Garrett Brown <themagnificentmrb@gmail.com>
-Date: Sat, 5 Sep 2026 03:52:40 -0700
-Subject: [PATCH 3/3] Restore the selected disc when loading a state
+Date: Sat, 5 Sep 2026 05:41:19 -0700
+Subject: [PATCH 6/6] Restore the selected disc when loading a state
 
 Loading a state restored the CD-ROM image but left the frontend's
 selected index unchanged. An M3U state also stored only the playlist
@@ -21,8 +21,8 @@ reordered on disk before the state was opened.
 ---
  src/core/system.cpp                      |  51 +++----
  src/core/system.h                        |   3 +-
- src/libretro/libretro_host_interface.cpp | 163 ++++++++++++++++++++++-
- 3 files changed, 190 insertions(+), 27 deletions(-)
+ src/libretro/libretro_host_interface.cpp | 162 ++++++++++++++++++++++-
+ 3 files changed, 187 insertions(+), 29 deletions(-)
 
 diff --git a/src/core/system.cpp b/src/core/system.cpp
 index 4bbfa9c4..b9b7f197 100644
@@ -134,16 +134,17 @@ index c5cc52cf..b65fbe04 100644
  
  /// Recreates the GPU component, saving/loading the state so it is preserved. Call when the GPU renderer changes.
 diff --git a/src/libretro/libretro_host_interface.cpp b/src/libretro/libretro_host_interface.cpp
-index f5f98063..5ef20a30 100644
+index 72008410..4c5f3706 100644
 --- a/src/libretro/libretro_host_interface.cpp
 +++ b/src/libretro/libretro_host_interface.cpp
-@@ -1,4 +1,5 @@
+@@ -1,5 +1,6 @@
+ #include "core/host_interface.h"
  #include "common/byte_stream.h"
 +#include "common/cd_image.h"
  #include "common/file_system.h"
  #include "common/log.h"
  #include "common/make_array.h"
-@@ -18,6 +19,7 @@
+@@ -16,6 +17,7 @@
  #include "core/negcon_rumble.h"
  #include "core/pad.h"
  #include "core/playstation_mouse.h"
@@ -323,21 +324,22 @@ index f5f98063..5ef20a30 100644
    // Ask the frontend whether this load is for runahead / rewind / netplay
    // rollback or a normal disk load. The runahead flavours guarantee the
    // state was produced by the same binary in the same address space, so
-@@ -968,7 +1121,13 @@ bool HostInterface::retro_unserialize(const void* data, size_t size)
+@@ -968,11 +1121,12 @@ bool HostInterface::retro_unserialize(const void* data, size_t size)
    }
  
    std::unique_ptr<ByteStream> stream = ByteStream_CreateReadOnlyMemoryStream(data, static_cast<uint32_t>(size));
--  return System::LoadState(stream.get(), is_memory_state);
+-  if (!System::LoadState(stream.get(), is_memory_state))
 +  if (!System::LoadState(stream.get(), is_memory_state, media_override, media_subimage_index))
-+    return false;
-+
+     return false;
+ 
+-  m_disk_control_info.ejected = !System::HasMedia();
+-  System::SetMediaTrayOpen(m_disk_control_info.ejected);
 +  info.image_index = selected_index;
 +  info.ejected = ejected;
 +  System::SetMediaTrayOpen(ejected);
-+  return true;
+   return true;
  }
  
- void* HostInterface::retro_get_memory_data(unsigned id)
 -- 
 2.50.1 (Apple Git-155)
 
