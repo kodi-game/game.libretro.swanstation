@@ -461,18 +461,6 @@ msgctxt "#30119"
 msgid "Controller 8 Force Analog Mode"
 msgstr "Controller 8: forza modalità analogica"
 
-msgctxt "#30120"
-msgid "Use Alternative Audio Hook (Restart)"
-msgstr "Usa gancio audio alternativo (richiede riavvio)"
-
-msgctxt "#30123"
-msgid "DualShock Analog Mode Combo"
-msgstr "DualShock: combinazione modalità analogica"
-
-msgctxt "#30124"
-msgid "DualShock Enable Rumble"
-msgstr "DualShock: abilita vibrazione (Rumble)"
-
 msgctxt "#30125"
 msgid "Console Settings"
 msgstr ""
@@ -1155,10 +1143,6 @@ msgstr ""
 
 msgctxt "#30295"
 msgid "L3 + R3"
-msgstr ""
-
-msgctxt "#30296"
-msgid "Enable haptic feedback when using a rumble-equipped gamepad with input device set to 'DualShock'."
 msgstr ""
 
 msgctxt "#30297"
@@ -1861,24 +1845,12 @@ msgctxt "#30471"
 msgid "LUT (Faster)"
 msgstr ""
 
-msgctxt "#30472"
-msgid "MMap (Hardware, Fastest, 64-Bit Only)"
-msgstr ""
-
 msgctxt "#30473"
 msgid "Enables rewrites when CPU Recompiler Fast Memory Access is enabled. Can provide a measurable speed boost, but may cause the core to segfault on certain platforms."
 msgstr ""
 
-msgctxt "#30474"
-msgid "Replace WRAM write textures with DuckStation formatted texture packs from the textures folder inside the RetroArch install directory. Currently only works with the Vulkan renderer."
-msgstr ""
-
 msgctxt "#30475"
 msgid "Preload VRAM write replacement textures to RAM"
-msgstr ""
-
-msgctxt "#30476"
-msgid "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system requirements."
 msgstr ""
 
 msgctxt "#30477"
@@ -1929,14 +1901,6 @@ msgctxt "#30488"
 msgid "Enabled an additional 6MB of RAM, usually present on dev consoles. Games have to use a larger heap size for this additional RAM to be usable, and may break games which rely on memory mirroring, so it should only be used with compatible mods."
 msgstr ""
 
-msgctxt "#30489"
-msgid "Use old routines for MDEC content."
-msgstr ""
-
-msgctxt "#30490"
-msgid "Use a faster and more efficient to submit audio samples to the frontend. Mostly safe to enable, but may hang for a select few games that rely on the old method to function. Requires the core to be restarted to apply."
-msgstr ""
-
 msgctxt "#30491"
 msgid "Interpreter"
 msgstr ""
@@ -1944,6 +1908,78 @@ msgstr ""
 msgctxt "#30492"
 msgid "Recompiler"
 msgstr ""
+
+msgctxt "#30493"
+msgid "OpenBIOS"
+msgstr ""
+
+msgctxt "#30494"
+msgid "Shader Precompilation"
+msgstr ""
+
+msgctxt "#30495"
+msgid "Controls when the hardware renderer's batch fragment shaders are compiled. 'Lazy' (default) compiles them on a background thread while gameplay starts immediately; the previous frontend-blocking behaviour is preserved as 'Enabled'. 'Disabled' skips precompilation entirely and compiles each shader on the main thread the first time the game actually dispatches a draw using it - lowest startup latency, but brief stutters can occur during early gameplay when new shader permutations are encountered. Changing the texture filter recompiles the matrix and pays this cost again."
+msgstr ""
+
+msgctxt "#30496"
+msgid "Lazy (background thread, default)"
+msgstr ""
+
+msgctxt "#30497"
+msgid "Enabled (block until done, like old behaviour)"
+msgstr ""
+
+msgctxt "#30498"
+msgid "Disabled (compile on first use)"
+msgstr ""
+
+msgctxt "#30499"
+msgid "Analog Mode Combo"
+msgstr ""
+
+msgctxt "#30500"
+msgid "Enable Rumble"
+msgstr ""
+
+msgctxt "#30501"
+msgid "Enable haptic feedback when using a rumble-equipped gamepad with a supported input device."
+msgstr ""
+
+msgctxt "#30502"
+msgid "MMap (Hardware, Faster, 64-Bit Only)"
+msgstr ""
+
+msgctxt "#30503"
+msgid "Replace 'VRAM write textures' with DuckStation-formatted texture packs from the 'swanstation/textures' folder inside the frontend's system directory. This only works with the Vulkan and D3D11 (where available) renderers."
+msgstr ""
+
+msgctxt "#30504"
+msgid "Simulates the system ahead of time and rolls back/replays to reduce input lag. Has very high system requirements. Most libretro frontends (including RetroArch) provide their own run-ahead implementation in their settings; the frontend version is generally more efficient and supports both single- and second-instance modes, so prefer it when available and leave this option at 0. Only enable this internal version if the frontend does not offer its own run-ahead, or to test against it."
+msgstr ""
+
+msgctxt "#30505"
+msgid "Use old routines for MDEC content. The newer routines may look better with some games, worse with others. As VRAM write texture replacements require either the old or new routines to function, it's adviced to toggle this setting to the routines required."
+msgstr ""
+
+msgctxt "#30506"
+msgid "Use Per-Frame Audio Batching (Restart)"
+msgstr ""
+
+msgctxt "#30507"
+msgid "Drains all SPU samples to the frontend once per emulated frame, instead of pushing each chunk as the SPU produces it. This is faster and produces more even audio batching, and is the right choice for almost every game. A small number of titles (notably Formula 1 / Formula 1 '97) hang at boot if audio is not delivered to the frontend mid-frame; the core auto-disables this option for those known titles, but if a game freezes at startup with audio enabled, try disabling this manually."
+msgstr ""
+
+#~ msgctxt "#30120"
+#~ msgid "Use Alternative Audio Hook (Restart)"
+#~ msgstr "Usa gancio audio alternativo (richiede riavvio)"
+
+#~ msgctxt "#30123"
+#~ msgid "DualShock Analog Mode Combo"
+#~ msgstr "DualShock: combinazione modalità analogica"
+
+#~ msgctxt "#30124"
+#~ msgid "DualShock Enable Rumble"
+#~ msgstr "DualShock: abilita vibrazione (Rumble)"
 
 #~ msgctxt "#30000"
 #~ msgid "Settings"
